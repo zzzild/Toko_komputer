@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uhuy.com</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&family=Poetsen+One&display=swap" rel="stylesheet">
+
+    
+</head>
+<body>
+    <!-- Navigation bar -->
+    <div class="bg-indigo-600 px-4 py-3 text-white flex items-center justify-between">
+        <div class="flex md:hidden">
+          <button class="text-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-500" id="hamburger-button">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+        </div>
+        <div class="flex-1 ">
+          <p class="text-center text-sm font-medium ">
+            Love Alpine JS?
+            <a href="#" class="inline-block underline">Check out this new course!</a>
+          </p>
+        </div>
+      </div>
+
+      <!-- side bar -->
+      <div class="flex h-screen">
+        <!-- Sidebar container -->
+        <div class="fixed inset-y-0 left-0 flex flex-col w-64 bg-white border-r shadow-lg md:relative md:translate-x-0 transform -translate-x-full transition-transform duration-300 ease-in-out z-20" id="sidebar">
+          <div class="px-4 py-6">
+            <div class="mb-10  mx-auto">
+                <span class="flex h-10 w-52 justify-center items-center rounded-lg bg-slate-300 text-xs text-gray-600">
+                    <h1 class="font-mono text-4xl font-bold" style="font-family:Anonymous Pro, monospace;">Uhuy.com</h1>
+                </span>
+            </div>      
+            <ul class="mt-6 space-y-1">
+              <li>
+                <a href="#" class="menu-link block rounded-lg bg-gray-100 px-4 py-2 text-sm font-medium text-gray-700 " data-content="home"> 
+                  Home
+                </a>
+              </li>
+              <li>
+                <details class="group [&_summary::-webkit-details-marker]:hidden">
+                  <summary class="flex cursor-pointer items-center justify-between rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+                    <span class="text-sm font-medium">Equipment</span>
+                    <span class="shrink-0 transition duration-300 group-open:-rotate-180">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                      </svg>
+                    </span>
+                  </summary>
+                  <ul class="mt-2 space-y-1 px-4">
+                    <li>
+                      <a href="#" class="menu-link block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700" data-content="keyboard">
+                        Keyboard
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="menu-link block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700" data-content="mouse">
+                        Mouse
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="menu-link block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700" data-content="headphone">
+                        HeadPhone
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="menu-link block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700" data-content="monitor">
+                        Monitor
+                      </a>
+                    </li>
+                  </ul>
+                </details>
+              </li>
+              <li>
+                <a href="#" class="menu-link block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700" data-content="laptop">
+                  Laptop
+                </a>
+              </li>
+              <details class="group [&_summary::-webkit-details-marker]:hidden">
+                <summary class="flex cursor-pointer items-center justify-between rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+                  <span class="text-sm font-medium">Hardware</span>
+                  <span class="shrink-0 transition duration-300 group-open:-rotate-180">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                      <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                    </svg>
+                  </span>
+                </summary>
+                <ul class="mt-2 space-y-1 px-4">
+                  <li>
+                    <a href="#" class="menu-link block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700" data-content="prosesor">
+                        Prosesor 
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="menu-link block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700" data-content="motherboard">
+                        Motherboard
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="menu-link block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700" data-content="graphiccard">
+                        Graphic Card
+                    </a>
+                  </li>
+                </ul>
+              </details>
+              <li>
+                <a href="#" class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+                  Invoices
+                </a>
+              </li>
+              <li>
+                <details class="group [&_summary::-webkit-details-marker]:hidden">
+                  <summary class="flex cursor-pointer items-center justify-between rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+                    <span class="text-sm font-medium">Account</span>
+                    <span class="shrink-0 transition duration-300 group-open:-rotate-180">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                      </svg>
+                    </span>
+                  </summary>
+                  <ul class="mt-2 space-y-1 px-4">
+                    <li>
+                      <a href="#" class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+                        Details
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+                        Security
+                      </a>
+                    </li>
+                    <li>
+                      <form action="#">
+                        <button type="submit" class="w-full rounded-lg px-4 py-2 text-sm font-medium text-gray-500 [text-align:_inherit] hover:bg-gray-100 hover:text-gray-700">
+                          Logout
+                        </button>
+                      </form>
+                    </li>
+                  </ul>
+                </details>
+              </li>
+            </ul>
+          </div>
+    
+          <div class="sticky inset-x-0 bottom-0 border-t border-gray-100">
+            <a href="#" class="flex items-center gap-2 bg-white p-4 hover:bg-gray-50">
+              <img alt="User avatar" src="https://images.unsplash.com/photo-1600486913747-55e5470d6f40?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80" class="h-10 w-10 rounded-full object-cover"/>
+              <div>
+                <p class="text-xs">
+                  <strong class="block font-medium">Eric Frusciante</strong>
+                  <span>eric@frusciante.com</span>
+                </p>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- Content container -->
+        <div class="flex-1">
+        <!-- main content -->
+        <div id="home" class="page-content">
+          <section class="bg-gray-900 bg-opacity-50 text-white bg-cover bg-center bg-[url('https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')]">
+            <div class="mx-auto max-w-screen-xl px-4 py-32 lg:flex lg:h-96 lg:items-center ">
+              <div class="max-w-full  text-left">
+                <h1
+                  class="text-slate-600 font-extrabold lg:text-4xl sm:text-5xl"
+                >
+                Upgrade Your Performance 
+
+                  <span class="sm:block"> with Cutting-Edge Tech. </span>
+                </h1>
+
+                <p class="mx-auto mt-4 max-w-xl sm:text-xl/relaxed text-xs text-slate-600">
+                  Experience Superior Performance and Innovation with Our <br> State-of-the-Art Technology Solutions
+                </p>
+              
+
+                
+
+                <div class="mt-6 flex flex-wrap justify-start gap-4">
+                  <a
+                    class="group relative inline-flex items-center overflow-hidden rounded border-blue-600 bg-blue-600 px-12 py-3 text-white focus:outline-none focus:ring active:bg-indigo-500"
+                    href="#Product"
+                  >
+                    <span class="absolute -end-full transition-all group-hover:end-4">
+                      <svg
+                        class="size-5 rtl:rotate-180"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M17 8l4 4m0 0l-4 4m4-4H3"
+                        />
+                      </svg>
+                    </span>
+                    <span class="text-sm font-medium transition-all group-hover:me-4"> See Product </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- After banner -->
+          <div class="mx-5">
+
+            <h1 class="font-bold text-slate-950 text-lg my-8">Categories</h1>
+  
+            <div class="flex items-center justify-center ml-5">
+              <a href="#" class="menu-link" data-content="keyboard">
+                  <article class="w-36 h-28 hover:animate-background rounded-xl bg-slate-300 shadow-xl transition hover:bg-[length:400%_400%] hover:shadow-sm hover:[animation-duration:_4s]">
+                      <div class="rounded-[10px] bg-white p-5 !pt-3 sm:p-6">
+                          <img src="./resource/keyboard-7215724_960_720.png" alt="keyboard" class="w-36 h-14">
+                          <h3 class="mt-0.5 text-xs font-medium text-gray-900 text-center">
+                              Keyboard
+                          </h3>
+                      </div>
+                  </article>
+              </a>
+
+              <div class="mx-4"></div> <!-- Tambahkan spasi di sini -->
+              <a href="#" class="menu-link" data-content="mouse">
+                  <article class="w-36 h-28 hover:animate-background rounded-xl bg-slate-300  shadow-xl transition hover:bg-[length:400%_400%] hover:shadow-sm hover:[animation-duration:_4s]">
+                      <div class="rounded-[10px] bg-white p-5 !pt-3 sm:p-6">
+                          <img src="./resource/mouse.png" alt="mouse" class="w-36 h-14">
+                          <h3 class="mt-0.5 text-xs font-medium text-gray-900 text-center">
+                              Mouse
+                          </h3>
+                      </div>
+                  </article>
+              </a>
+              
+              <div class="mx-4"></div> <!-- Tambahkan spasi di sini -->
+              <a href="" class="menu-link" data-content="headphone">
+                  <article class="w-36 h-28 hover:animate-background rounded-xl bg-slate-300  shadow-xl transition hover:bg-[length:400%_400%] hover:shadow-sm hover:[animation-duration:_4s]">
+                      <div class="rounded-[10px] bg-white p-5 !pt-3 sm:p-6">
+                          <img src="./resource/headphone.png" alt="HeadPhone" class="w-36 h-14">
+                          <h3 class="mt-0.5 text-xs font-medium text-gray-900 text-center">
+                              Headphone
+                          </h3>
+                      </div>
+                  </article>
+              </a>
+              
+              <div class="mx-4"></div> <!-- Tambahkan spasi di sini -->
+              <a href="" class="menu-link" data-content="laptop">
+                  <article class="w-36 h-28 hover:animate-background rounded-xl bg-slate-300  shadow-xl transition hover:bg-[length:400%_400%] hover:shadow-sm hover:[animation-duration:_4s]">
+                      <div class="rounded-[10px] bg-white p-5 !pt-3 sm:p-6">
+                          <img src="./resource/laptop.png" alt="Laptop" class="w-36 h-14">
+                          <h3 class="mt-0.5 text-xs font-medium text-gray-900 text-center">
+                              Laptop
+                          </h3>
+                      </div>
+                  </article>
+              </a>
+              
+              <div class="mx-4"></div> <!-- Tambahkan spasi di sini -->
+              <a href="" class="menu-link" data-content="monitor">
+                  <article class="w-36 h-28 hover:animate-background rounded-xl bg-slate-300  shadow-xl transition hover:bg-[length:400%_400%] hover:shadow-sm hover:[animation-duration:_4s]">
+                      <div class="rounded-[10px] bg-white p-5 !pt-3 sm:p-6 ">
+                          <img src="./resource/screen.png" alt="Monitor"  class="w-36 h-14">
+                          <h3 class="mt-0.5 text-xs font-medium text-gray-900 text-center">
+                              Monitor
+                          </h3>
+                      </div>
+                  </article>
+              </a>
+
+              <div class="mx-4"></div> <!-- Tambahkan spasi di sini -->
+              <a href="" class="menu-link" data-content="prosesor">
+                  <article class="w-36 h-28 hover:animate-background rounded-xl bg-slate-300  shadow-xl transition hover:bg-[length:400%_400%] hover:shadow-sm hover:[animation-duration:_4s]">
+                      <div class="rounded-[10px] bg-white p-5 !pt-3 sm:p-6 ">
+                          <img src="./resource/motherboard.png" alt="Monitor"  class="w-36 h-14">
+                          <h3 class="mt-0.5 text-xs font-medium text-gray-900 text-center">
+                              Hardware
+                          </h3>
+                      </div>
+                  </article>
+              </a>    
+              </div>        
+              
+              <h1 class="font-bold text-slate-950 text-lg my-8">Popular Products</h1>
+
+
+              <div class="flex items-center justify-center ml-5" id="Product">
+                <div class="mx-4"></div>
+                <a href="#" class="block rounded-lg p-4 shadow-xl shadow-indigo-100 ">
+                  <img
+                    alt=""
+                    src="resource/product/keyboard1.jpg"
+                    class="h-56 w-full rounded-md object-cover"
+                  />
+                
+                  <div class="mt-2 ">
+                    <dl>
+                      <div>
+                        
+                        <dd class="font-medium">Keyboard Wireless - GT 65 LITE </dd>
+                      </div>
+                      
+                      <div>
+                        <dt class="sr-only">Price</dt>
+                        
+                        <dd class="text-sm text-gray-500">Rp.650.000</dd>
+                      </div>
+                    </dl>
+                
+                    <div class="mt-6 flex items-center justify-between gap-8 text-xs">
+                      <div class="sm:inline-flex sm:shrink-0 sm:items-center sm:gap-2">
+                        <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        class="size-4 text-indigo-700"
+                    >
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M3 3h18l-9 9-9-9z"
+                        />
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M9 21V10L3 3v18h18V3l-6 7v11z"
+                        />
+                    </svg>
+                
+                        <div class="mt-1.5 sm:mt-0">
+                          <p class="text-gray-500">Stock</p>
+                
+                          <p class="font-medium">30</p>
+                        </div>
+                      </div>
+                
+                      
+                
+                      <div class="sm:inline-flex sm:shrink-0 sm:items-center sm:gap-2">
+                        <svg 
+                        xmlns="http://www.w3.org/2000/svg" 
+                        fill="none" 
+                        viewBox="0 0 24 24" 
+                        stroke="currentColor" 
+                        class="size-4 text-indigo-700">
+                        
+                        <path 
+                        stroke-width="2" 
+                          stroke-linecap="round" 
+                          stroke-linejoin="round" 
+                          d="M5.25 8.25h15m-16.5 7.5h15m-1.8-13.5-3.9 19.5m-2.1-19.5-3.9 19.5" />
+                        </svg>
+                        
+                
+                        <div class="mt-1.5 sm:mt-0">
+                          <p class="text-gray-500">Kode</p>
+                
+                          <p class="font-medium">GT65LITE</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <div class="mx-4"></div>
+                <a href="#" class="block rounded-lg p-4 shadow-xl shadow-indigo-100 ">
+                  <img
+                    alt=""
+                    src="resource/product/keyboard1.jpg"
+                    class="h-56 w-full rounded-md object-cover"
+                  />
+                
+                  <div class="mt-2 ">
+                    <dl>
+                      <div>
+                        
+                        <dd class="font-medium">Keyboard Wireless - GT 65 LITE </dd>
+                      </div>
+                      
+                      <div>
+                        <dt class="sr-only">Price</dt>
+                        
+                        <dd class="text-sm text-gray-500">Rp.650.000</dd>
+                      </div>
+                    </dl>
+                
+                    <div class="mt-6 flex items-center justify-between gap-8 text-xs">
+                      <div class="sm:inline-flex sm:shrink-0 sm:items-center sm:gap-2">
+                        <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        class="size-4 text-indigo-700"
+                    >
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M3 3h18l-9 9-9-9z"
+                        />
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M9 21V10L3 3v18h18V3l-6 7v11z"
+                        />
+                    </svg>
+                
+                        <div class="mt-1.5 sm:mt-0">
+                          <p class="text-gray-500">Stock</p>
+                
+                          <p class="font-medium">30</p>
+                        </div>
+                      </div>
+                
+                      
+                
+                      <div class="sm:inline-flex sm:shrink-0 sm:items-center sm:gap-2">
+                        <svg 
+                        xmlns="http://www.w3.org/2000/svg" 
+                        fill="none" 
+                        viewBox="0 0 24 24" 
+                        stroke="currentColor" 
+                        class="size-4 text-indigo-700">
+                        
+                        <path 
+                        stroke-width="2" 
+                          stroke-linecap="round" 
+                          stroke-linejoin="round" 
+                          d="M5.25 8.25h15m-16.5 7.5h15m-1.8-13.5-3.9 19.5m-2.1-19.5-3.9 19.5" />
+                        </svg>
+                        
+                
+                        <div class="mt-1.5 sm:mt-0">
+                          <p class="text-gray-500">Kode</p>
+                
+                          <p class="font-medium">GT65LITE</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <div class="mx-4"></div>
+                <a href="#" class="block rounded-lg p-4 shadow-xl shadow-indigo-100 ">
+                  <img
+                    alt=""
+                    src="resource/product/keyboard1.jpg"
+                    class="h-56 w-full rounded-md object-cover"
+                  />
+                
+                  <div class="mt-2 ">
+                    <dl>
+                      <div>
+                        
+                        <dd class="font-medium">Keyboard Wireless - GT 65 LITE </dd>
+                      </div>
+                      
+                      <div>
+                        <dt class="sr-only">Price</dt>
+                        
+                        <dd class="text-sm text-gray-500">Rp.650.000</dd>
+                      </div>
+                    </dl>
+                
+                    <div class="mt-6 flex items-center justify-between gap-8 text-xs">
+                      <div class="sm:inline-flex sm:shrink-0 sm:items-center sm:gap-2">
+                        <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        class="size-4 text-indigo-700"
+                    >
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M3 3h18l-9 9-9-9z"
+                        />
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M9 21V10L3 3v18h18V3l-6 7v11z"
+                        />
+                    </svg>
+                
+                        <div class="mt-1.5 sm:mt-0">
+                          <p class="text-gray-500">Stock</p>
+                
+                          <p class="font-medium">30</p>
+                        </div>
+                      </div>
+                
+                      
+                
+                      <div class="sm:inline-flex sm:shrink-0 sm:items-center sm:gap-2">
+                        <svg 
+                        xmlns="http://www.w3.org/2000/svg" 
+                        fill="none" 
+                        viewBox="0 0 24 24" 
+                        stroke="currentColor" 
+                        class="size-4 text-indigo-700">
+                        
+                        <path 
+                        stroke-width="2" 
+                          stroke-linecap="round" 
+                          stroke-linejoin="round" 
+                          d="M5.25 8.25h15m-16.5 7.5h15m-1.8-13.5-3.9 19.5m-2.1-19.5-3.9 19.5" />
+                        </svg>
+                        
+                
+                        <div class="mt-1.5 sm:mt-0">
+                          <p class="text-gray-500">Kode</p>
+                
+                          <p class="font-medium">GT65LITE</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <br>
+              <br>
+              <br>
+
+          </div>
+          
+          
+            
+          </div>
+        </div>
+
+        <div class="page-content" id="keyboard">
+            <h1>keyboard</h1>
+        </div>
+        
+        <div class="page-content" id="mouse">
+            <h1>Mouse</h1>
+        </div>
+        
+        <div class="page-content" id="headphone">
+            <h1>Headphone</h1>
+        </div>
+        
+        <div class="page-content" id="monitor">
+            <h1>Monitor</h1>
+        </div>
+        
+        <div class="page-content" id="laptop">
+            <h1>Laptop</h1>
+        </div>
+
+        <div class="page-content" id="prosesor">
+            <h1>Prosesor</h1>
+        </div>
+
+        <div class="page-content" id="motherboard">
+            <h1>Motherboard</h1>
+        </div>
+
+        <div class="page-content" id="graphiccard">
+            <h1>graphic card</h1>
+        </div>
+
+
+      </div>
+
+
+      <script src="js/main.js"></script>
+      <script>
+        
+      </script>
+
+      
+</body>
+</html>
