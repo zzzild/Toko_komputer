@@ -20,13 +20,11 @@
 <body class="scroll-smooth">
 
       <!-- Navigation Bar -->
-          <header class="bg-gray-200 fixed  w-full z-10 shadow-xl">
+          <header class="bg-zinc-600 fixed  w-full z-10 shadow-xl">
             <div class="mx-auto max-w-screen-xl px-4 py-3 sm:px-6 sm:py-2 lg:px-8">
               <div class="sm:flex sm:items-center sm:justify-between">
                 <div class="text-center sm:text-left">
-                  <h1 class="text-2xl font-bold text-slate-600 sm:text-3xl font-mono">Welcome back to, <span class="text-indigo-500">uhuy.com</span></h1>
-
-                  <p class="mt-1.5 text-sm text-gray-500">We're thrilled to have you back on our site! 🎉</p>
+                  <h1 class="text-2xl font-bold text-white sm:text-3xl font-mono">uhuy<span class="text-yellow-400">.com</span></h1>
                 </div>
 
                 <div class="mt-4 flex flex-col gap-4 sm:mt-0 sm:flex-row sm:items-center">
@@ -34,32 +32,48 @@
                     <nav aria-label="Global">
                       <ul class="flex items-center gap-6 text-sm">
                         <li>
-                          <a class="text-gray-500 transition hover:text-gray-500/75" href="#home"> Home </a>
+                          <a class="text-slate-300 transition hover:text-yellow-500" href="#home"> Home </a>
                         </li>
             
                         <li>
-                          <a class="text-gray-500 transition hover:text-gray-500/75" href="#about"> About </a>
+                          <a class="text-slate-300 transition hover:text-yellow-500" href="#about"> About </a>
                         </li>
             
                         <li>
-                          <a class="text-gray-500 transition hover:text-gray-500/75" href="#Popular"> Popular </a>
+                          <a class="text-slate-300 transition hover:text-yellow-500" href="#Popular"> Popular </a>
                         </li>
             
                         <li>
-                          <a class="text-gray-500 transition hover:text-gray-500/75" href="#Services"> Services </a>
+                          <a class="text-slate-300 transition hover:text-yellow-500" href="#Services"> Services </a>
                         </li>
             
                         <li>
-                          <a class="text-gray-500 transition hover:text-gray-500/75" href="#Product"> Products </a>
+                          <a class="text-slate-300 transition hover:text-yellow-500" href="#Product"> Products </a>
                         </li>
             
                         <li>
-                          <a class="text-gray-500 transition hover:text-gray-500/75" href="#"> Blog </a>
+                          <a class="text-slate-300 transition hover:text-yellow-500" href="#"> Blog </a>
                         </li>
                       </ul>
                     </nav>
                   </div>
                 </div>
+                <div class="sm:flex sm:gap-4">
+                  <a
+                    class="rounded-md bg-yellow-400 px-5 py-2.5 text-sm font-medium text-black shadow"
+                    href="#"
+                  >
+                  Login
+                  </a>
+        
+                  <div class="hidden sm:flex">
+                    <a
+                      class="rounded-md bg-black px-5 py-2.5 text-sm font-medium text-yellow-400"
+                      href="#"
+                    >
+                      Register
+                    </a>
+                  </div>
               </div>
             </div>
           </header>
@@ -68,11 +82,11 @@
         <!-- main content -->
         <div id="home" class="page-content">
           <section class="bg-gray-900 bg-opacity-50 text-white bg-cover bg-center bg-[url('https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')]">
-            <div class="mx-auto max-w-screen-xl px-4 py-32 lg:flex lg:h-auto lg:items-center ">
+            <div class="mx-auto max-w-screen-xl px-4 py-36 lg:flex lg:h-auto lg:items-center ">
               <div class="max-w-full text-left">
                 <h1
-                  class="text-slate-600 font-extrabold lg:text-4xl sm:text-5xl">Upgrade Your Performance 
-                  <span class="sm:block"> with Cutting-Edge Tech. </span>
+                  class="text-slate-700 font-extrabold lg:text-4xl sm:text-5xl">Upgrade Your Performance 
+                  <span class="sm:block text-text-yellow-300"> with Cutting-Edge Tech. </span>
                 </h1>
 
                 <p class="mx-auto mt-4 max-w-xl sm:text-xl/relaxed text-xs text-slate-600">
@@ -81,7 +95,7 @@
 
                 <div class="mt-6 flex flex-wrap justify-start gap-4">
                   <a
-                    class="group  z-0 relative inline-flex items-center overflow-hidden rounded  bg-indigo-500 px-12 py-3 text-white focus:outline-none focus:ring active:bg-indigo-500"
+                    class="group  z-0 relative inline-flex items-center overflow-hidden rounded  bg-yellow-400 px-12 py-3 text-black focus:outline-none focus:ring active:bg-black active:text-yellow-400"
                     href="#Product"
                   >
                     <span class="absolute -end-full transition-all group-hover:end-4">
@@ -111,7 +125,7 @@
           <div class="container mx-auto">
 
             <!-- CATEGORY -->
-            <h1 class="font-bold text-slate-600 text-lg my-8">Categories</h1>  
+            <h1 class="font-bold text-zinc-600 text-lg my-8">Categories</h1>  
             <div class="flex items-center justify-center ml-5">
               <a href="#Product" class="menu-link" data-content="keyboard">
                   <article class="w-36 h-28 hover:animate-background rounded-xl bg-slate-300 shadow-xl transition hover:bg-[length:400%_400%] hover:shadow-sm hover:[animation-duration:_4s]">
@@ -126,8 +140,8 @@
 
               <div class="mx-4"></div>
               <a href="#Product" class="menu-link" data-content="mouse">
-                  <article class="w-36 h-28 hover:animate-background rounded-xl bg-slate-300  shadow-xl transition hover:bg-[length:400%_400%] hover:shadow-sm hover:[animation-duration:_4s]">
-                      <div class="rounded-[10px] bg-slate-200 p-5 !pt-3 sm:p-6">
+                  <article class="w-36 h-28 hover:animate-background rounded-xl  bg-slate-300  shadow-xl transition hover:bg-[length:400%_400%] hover:shadow-sm hover:[animation-duration:_4s]">
+                      <div class="rounded-[10px] bg-slate-200 p-5 !pt-3 sm:p-6 ">
                           <img src="./resource/mouse.png" alt="mouse" class="w-36 h-14">
                           <h3 class="mt-0.5 text-xs font-medium text-gray-900 text-center">
                               Mouse
@@ -186,7 +200,7 @@
             </div>        
               
             <!-- POPULAR -->
-              <h2 class="font-bold text-slate-600 text-xl my-8" id="Popular">Popular Products</h2>
+              <h2 class="font-bold text-zinc-600 text-xl my-8" id="Popular">Popular Products</h2>
               <div class="container sm:flex sm:flex-wrap flex items-center justify-center " >
                 <div class="mx-4"></div>
                 <div class="grid grid-cols-3 gap-6">
@@ -198,7 +212,7 @@
                     />
                   
                     <div class="relative p-4 sm:p-6 lg:p-8">
-                      <p class="text-sm font-medium uppercase tracking-widest text-pink-500">Monitor hd</p>
+                      <p class="text-sm font-medium uppercase tracking-widest text-yellow-500">Monitor hd</p>
                   
                       <p class="text-xl font-bold text-white sm:text-2xl">Samsung M8</p>
                   
@@ -224,7 +238,7 @@
                     />
                   
                     <div class="relative p-4 sm:p-6 lg:p-8">
-                      <p class="text-sm font-medium uppercase tracking-widest text-pink-500">Headphones</p>
+                      <p class="text-sm font-medium uppercase tracking-widest text-yellow-500">Headphones</p>
                   
                       <p class="text-xl font-bold text-white sm:text-2xl">Life Q30</p>
                   
@@ -248,7 +262,7 @@
                     />
                   
                     <div class="relative p-4 sm:p-6 lg:p-8">
-                      <p class="text-sm font-medium uppercase tracking-widest text-pink-500">Laptop Gaming</p>
+                      <p class="text-sm font-medium uppercase tracking-widest text-yellow-500">Laptop Gaming</p>
                   
                       <p class="text-xl font-bold text-white sm:text-2xl">Zephyrus g14</p>
                   
@@ -272,7 +286,7 @@
                     />
                   
                     <div class="relative p-4 sm:p-6 lg:p-8">
-                      <p class="text-sm font-medium uppercase tracking-widest text-pink-500">Mouse Wireless</p>
+                      <p class="text-sm font-medium uppercase tracking-widest text-yellow-500">Mouse Wireless</p>
                   
                       <p class="text-xl font-bold text-white sm:text-2xl">Logitech G304</p>
                   
@@ -296,7 +310,7 @@
                     />
                   
                     <div class="relative p-4 sm:p-6 lg:p-8">
-                      <p class="text-sm font-medium uppercase tracking-widest text-pink-500">Keyboard Mechanical</p>
+                      <p class="text-sm font-medium uppercase tracking-widest text-yellow-500">Keyboard Mechanical</p>
                   
                       <p class="text-xl font-bold text-white sm:text-2xl">YUNZII Keynovo IF98</p>
                   
@@ -320,7 +334,7 @@
                     />
                   
                     <div class="relative p-4 sm:p-6 lg:p-8">
-                      <p class="text-sm font-medium uppercase tracking-widest text-pink-500">graphics cards</p>
+                      <p class="text-sm font-medium uppercase tracking-widest text-yellow-500">graphics cards</p>
                   
                       <p class="text-xl font-bold text-white sm:text-2xl">ASUS RTX 2060</p>
                   
@@ -344,7 +358,7 @@
               <div class="max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16">
                 <div class="grid grid-cols-1 gap-y-8 lg:grid-cols-2 lg:items-center lg:gap-x-16">
                   <div class="mx-auto max-w-lg text-center lg:mx-0 ltr:lg:text-left rtl:lg:text-right">
-                    <h2 class="text-3xl font-bold sm:text-4xl">About Us</h2>
+                    <h2 class="text-3xl text-zinc-600 font-bold sm:text-4xl">About Us</h2>
 
                     <p class="mt-4 text-gray-600">
                       Welcome to Uhuy.com, your trusted destination for all things computing. Established in 2024, we have been dedicated to providing top-quality products, exceptional customer service, and expert advice to tech enthusiasts and professionals alike
@@ -352,15 +366,15 @@
 
                     <a
                       href="#"
-                      class="mt-8 inline-block rounded bg-indigo-500 px-12 py-3 text-sm font-medium text-white transition hover:bg-indigo-700 focus:outline-none focus:ring focus:ring-yellow-400"
+                      class="uppercase mt-8 inline-block rounded bg-yellow-400  px-12 py-3 text-sm font-medium text-black transition hover:bg-black hover:text-yellow-400 focus:outline-none focus:ring focus:ring-yellow-400"
                     >
-                    let'See the Product
+                    let's see
                     </a>
                   </div>
 
                   <div class="grid grid-cols-2 gap-4 sm:grid-cols-3">
                     <a
-                      class="block rounded-xl border border-gray-100 bg-gray-200 p-4 shadow-sm hover:border-gray-200 hover:ring-1 hover:ring-gray-200 focus:outline-none focus:ring"
+                      class="block rounded-xl border  border-gray-100 bg-zinc-600 p-4 shadow-sm hover:border-gray-200 hover:ring-1 hover:ring-gray-200 focus:outline-none focus:ring"
                       href="#"
                     >
                       <span class="inline-block rounded-lg bg-gray-50 p-3">
@@ -370,15 +384,15 @@
                         </svg>
                       </span>
 
-                      <h2 class="mt-2 font-bold">Wide Product</h2>
+                      <h2 class="mt-2 font-bold text-yellow-400">Wide Product</h2>
 
-                      <p class="hidden sm:mt-1 sm:block sm:text-sm sm:text-gray-600">
+                      <p class="hidden sm:mt-1 text-white sm:block sm:text-sm sm:text-white">
                         From high-performance desktops and laptops
                       </p>
                     </a>
 
                     <a
-                      class="block rounded-xl border border-gray-100 p-4 shadow-sm bg-indigo-300  hover:border-gray-200 hover:ring-1 hover:ring-gray-200 focus:outline-none focus:ring"
+                      class="block rounded-xl border border-gray-100 p-4 shadow-sm bg-gray-200  hover:border-gray-200 hover:ring-1 hover:ring-gray-200 focus:outline-none focus:ring"
                       href="#"
                     >
                       <span class="inline-block rounded-lg  p-3 bg-gray-200">
@@ -396,7 +410,7 @@
                     </a>
 
                     <a
-                      class="block rounded-xl border border-gray-100 p-4 shadow-sm bg-gray-200 hover:border-gray-200 hover:ring-1 hover:ring-gray-200 focus:outline-none focus:ring"
+                      class="block rounded-xl border border-gray-100 p-4 shadow-sm bg-zinc-600 hover:border-gray-200 hover:ring-1 hover:ring-gray-200 focus:outline-none focus:ring"
                       href="#"
                     >
                       <span class="inline-block rounded-lg bg-gray-50 p-3">
@@ -406,15 +420,15 @@
                         </svg>
                       </span>
 
-                      <h2 class="mt-2 font-bold">Expert Support</h2>
+                      <h2 class="mt-2 font-bold text-yellow-400">Expert Support</h2>
 
-                      <p class="hidden sm:mt-1 sm:block sm:text-sm sm:text-gray-600">
+                      <p class="hidden sm:mt-1 sm:block sm:text-sm text-white sm:text-white">
                         Our knowledgeable staff is here to help
                       </p>
                     </a>
                     
                     <a
-                      class="block rounded-xl border border-gray-100 p-4 shadow-sm bg-indigo-300  hover:border-gray-200 hover:ring-1 hover:ring-gray-200 focus:outline-none focus:ring"
+                      class="block rounded-xl border border-gray-100 p-4 shadow-sm bg-gray-200  hover:border-gray-200 hover:ring-1 hover:ring-gray-200 focus:outline-none focus:ring"
                       href="#"
                     >
                       <span class="inline-block rounded-lg bg-gray-200 p-3">
@@ -432,7 +446,7 @@
                     </a>
 
                     <a
-                      class="block rounded-xl border border-gray-100 p-4 shadow-sm bg-gray-200 hover:border-gray-200 hover:ring-1 hover:ring-gray-200 focus:outline-none focus:ring"
+                      class="block rounded-xl border border-gray-100 p-4 shadow-sm bg-zinc-600 hover:border-gray-200 hover:ring-1 hover:ring-gray-200 focus:outline-none focus:ring"
                       href="#"
                     >
                       <span class="inline-block rounded-lg bg-gray-50 p-3">
@@ -442,15 +456,15 @@
                           </svg>
                       </span>
 
-                      <h2 class="mt-2 font-bold">Fast Shipping</h2>
+                      <h2 class="mt-2 font-bold text-yellow-400">Fast Shipping</h2>
 
-                      <p class="hidden sm:mt-1 sm:block sm:text-sm sm:text-gray-600">
+                      <p class="hidden sm:mt-1 sm:block text-white sm:text-sm sm:text-white">
                         Enjoy quick and reliable shipping
                       </p>
                     </a>
 
                     <a
-                      class="block rounded-xl border border-gray-100 p-4 shadow-sm bg-indigo-300  hover:border-gray-200 hover:ring-1 hover:ring-gray-200 focus:outline-none focus:ring"
+                      class="block rounded-xl border border-gray-100 p-4 shadow-sm bg-gray-200  hover:border-gray-200 hover:ring-1 hover:ring-gray-200 focus:outline-none focus:ring"
                       href="#"
                     >
                       <span class="inline-block rounded-lg  bg-gray-200 p-3">
@@ -477,7 +491,7 @@
           </div>
 
           <!-- PRODUK -->
-          <h2 class="font-bold text-slate-600 text-xl my-8" id="Product">Explore our Products</h2>
+          <h2 class="font-bold text-zinc-600 text-xl my-8" id="Product">Explore our Products</h2>
           <div class="container gap-y-3 sm:flex sm:flex-wrap flex items-center justify-center " >
             <!-- Keyboard -->
             <a href="#"  class="block rounded-lg p-4 shadow-xl hover:shadow-lg hover:shadow-indigo-300 transition-shadow duration-300 delay-100  shadow-indigo-100 w-80 ">
@@ -490,13 +504,13 @@
                 <dl>
                   <div>
                     
-                    <dd class="font-medium">YUNZII Keynovo IF98</dd>
+                    <dd class="font-bold ">YUNZII Keynovo IF98</dd>
                   </div>
                   
                   <div>
                     <dt class="sr-only">Price</dt>
                     
-                    <dd class="text-sm text-gray-500">Rp.2.950.000</dd>
+                    <dd class="text-sm text-yellow-500 font-bold">Rp2.950.000</dd>
                   </div>
                 </dl>
             
@@ -507,7 +521,7 @@
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
-                    class="size-4 text-indigo-700"
+                    class="size-4 text-yellow-500"
                 >
                     <path
                         stroke-linecap="round"
@@ -535,7 +549,7 @@
                     fill="none" 
                     viewBox="0 0 24 24" 
                     stroke="currentColor" 
-                    class="size-4 text-indigo-700">
+                    class="size-4 text-yellow-500">
                     
                     <path 
                     stroke-width="2" 
@@ -564,13 +578,13 @@
                 <dl>
                   <div>
                     
-                    <dd class="font-medium">Redragon K617</dd>
+                    <dd class=" font-bold">Redragon K617</dd>
                   </div>
                   
                   <div>
                     <dt class="sr-only">Price</dt>
                     
-                    <dd class="text-sm text-gray-500">Rp.400.000</dd>
+                    <dd class="text-sm font-bold text-yellow-500">Rp400.000</dd>
                   </div>
                 </dl>
             
@@ -581,7 +595,7 @@
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
-                    class="size-4 text-indigo-700"
+                    class="size-4 text-yellow-500"
                 >
                     <path
                         stroke-linecap="round"
@@ -609,7 +623,7 @@
                     fill="none" 
                     viewBox="0 0 24 24" 
                     stroke="currentColor" 
-                    class="size-4 text-indigo-700">
+                    class="size-4 text-yellow-500">
                     
                     <path 
                     stroke-width="2" 
@@ -638,13 +652,13 @@
                 <dl>
                   <div>
                     
-                    <dd class="font-medium">MageGee MK-Box </dd>
+                    <dd class="font-bold">MageGee MK-Box </dd>
                   </div>
                   
                   <div>
                     <dt class="sr-only">Price</dt>
                     
-                    <dd class="text-sm text-gray-500">Rp.800.000</dd>
+                    <dd class="text-sm text-yellow-500 font-bold">Rp.800.000</dd>
                   </div>
                 </dl>
             
@@ -655,7 +669,7 @@
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
-                    class="size-4 text-indigo-700"
+                    class="size-4 text-yellow-500"
                 >
                     <path
                         stroke-linecap="round"
@@ -683,7 +697,7 @@
                     fill="none" 
                     viewBox="0 0 24 24" 
                     stroke="currentColor" 
-                    class="size-4 text-indigo-700">
+                    class="size-4 text-yellow-500">
                     
                     <path 
                     stroke-width="2" 
@@ -712,13 +726,13 @@
                 <dl>
                   <div>
                     
-                    <dd class="font-medium">Nuphy Air75</dd>
+                    <dd class="font-bold">Nuphy Air75</dd>
                   </div>
                   
                   <div>
                     <dt class="sr-only">Price</dt>
                     
-                    <dd class="text-sm text-gray-500">Rp.1.899.000</dd>
+                    <dd class="text-sm text-yellow-500 font-bold">Rp1899.000</dd>
                   </div>
                 </dl>
             
@@ -729,7 +743,7 @@
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
-                    class="size-4 text-indigo-700"
+                    class="size-4 text-yellow-500"
                 >
                     <path
                         stroke-linecap="round"
@@ -757,7 +771,7 @@
                     fill="none" 
                     viewBox="0 0 24 24" 
                     stroke="currentColor" 
-                    class="size-4 text-indigo-700">
+                    class="size-4 text-yellow-500">
                     
                     <path 
                     stroke-width="2" 
@@ -789,13 +803,13 @@
                 <dl>
                   <div>
                     
-                    <dd class="font-medium">Samsung M8</dd>
+                    <dd class="font-bold">Samsung M8</dd>
                   </div>
                   
                   <div>
                     <dt class="sr-only">Price</dt>
                     
-                    <dd class="text-sm text-gray-500">Rp.6.500.000</dd>
+                    <dd class="text-sm text-yellow-500 font-bold">Rp6.500.000</dd>
                   </div>
                 </dl>
             
@@ -806,7 +820,7 @@
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
-                    class="size-4 text-indigo-700"
+                    class="size-4 text-yellow-500"
                 >
                     <path
                         stroke-linecap="round"
@@ -834,7 +848,7 @@
                     fill="none" 
                     viewBox="0 0 24 24" 
                     stroke="currentColor" 
-                    class="size-4 text-indigo-700">
+                    class="size-4 text-yellow-500">
                     
                     <path 
                     stroke-width="2" 
@@ -864,13 +878,13 @@
                 <dl>
                   <div>
                     
-                    <dd class="font-medium">ViewSonic VX2416</dd>
+                    <dd class="font-bold">ViewSonic VX2416</dd>
                   </div>
                   
                   <div>
                     <dt class="sr-only">Price</dt>
                     
-                    <dd class="text-sm text-gray-500">Rp.1.950.000</dd>
+                    <dd class="text-sm text-yellow-500 font-bold">Rp1.950.000</dd>
                   </div>
                 </dl>
             
@@ -881,7 +895,7 @@
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
-                    class="size-4 text-indigo-700"
+                    class="size-4 text-yellow-500"
                 >
                     <path
                         stroke-linecap="round"
@@ -912,7 +926,7 @@
                     fill="none" 
                     viewBox="0 0 24 24" 
                     stroke="currentColor" 
-                    class="size-4 text-indigo-700">
+                    class="text-yellow-500">
                     
                     <path 
                     stroke-width="2" 
@@ -942,13 +956,13 @@
                 <dl>
                   <div>
                     
-                    <dd class="font-medium">Koorui  24E4</dd>
+                    <dd class="font-bold">Koorui  24E4</dd>
                   </div>
                   
                   <div>
                     <dt class="sr-only">Price</dt>
                     
-                    <dd class="text-sm text-gray-500">Rp.2.000.000</dd>
+                    <dd class="text-sm text-yellow-500 font-bold">Rp2.000.000</dd>
                   </div>
                 </dl>
             
@@ -959,7 +973,7 @@
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
-                    class="size-4 text-indigo-700"
+                    class="size-4 text-yellow-500"
                 >
                     <path
                         stroke-linecap="round"
@@ -990,7 +1004,7 @@
                     fill="none" 
                     viewBox="0 0 24 24" 
                     stroke="currentColor" 
-                    class="size-4 text-indigo-700">
+                    class="size-4 text-yellow-500">
                     
                     <path 
                     stroke-width="2" 
@@ -1020,13 +1034,13 @@
                 <dl>
                   <div>
                     
-                    <dd class="font-medium">HP M24fwa</dd>
+                    <dd class="font-bold">HP M24fwa</dd>
                   </div>
                   
                   <div>
                     <dt class="sr-only">Price</dt>
                     
-                    <dd class="text-sm text-gray-500">Rp.2.199.000</dd>
+                    <dd class="text-sm font-bold text-yellow-500">Rp2.199.000</dd>
                   </div>
                 </dl>
             
@@ -1037,7 +1051,7 @@
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
-                    class="size-4 text-indigo-700"
+                    class="size-4 text-yellow-500"
                 >
                     <path
                         stroke-linecap="round"
@@ -1068,7 +1082,7 @@
                     fill="none" 
                     viewBox="0 0 24 24" 
                     stroke="currentColor" 
-                    class="size-4 text-indigo-700">
+                    class="size-4 text-yellow-500">
                     
                     <path 
                     stroke-width="2" 
@@ -1100,13 +1114,13 @@
                 <dl>
                   <div>
                     
-                    <dd class="font-medium">Anker Life Q30 Hybrid</dd>
+                    <dd class="font-bold">Anker Life Q30 Hybrid</dd>
                   </div>
                   
                   <div>
                     <dt class="sr-only">Price</dt>
                     
-                    <dd class="text-sm text-gray-500">Rp.850.000</dd>
+                    <dd class="text-sm font-bold text-yellow-500">Rp850.000</dd>
                   </div>
                 </dl>
             
@@ -1117,7 +1131,7 @@
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
-                    class="size-4 text-indigo-700"
+                    class="size-4 text-yellow-500"
                 >
                     <path
                         stroke-linecap="round"
@@ -1148,7 +1162,7 @@
                     fill="none" 
                     viewBox="0 0 24 24" 
                     stroke="currentColor" 
-                    class="size-4 text-indigo-700">
+                    class="size-4 text-yellow-500">
                     
                     <path 
                     stroke-width="2" 
@@ -1178,13 +1192,13 @@
                 <dl>
                   <div>
                     
-                    <dd class="font-medium">Lenovo TH10</dd>
+                    <dd class="font-bold">Lenovo TH10</dd>
                   </div>
                   
                   <div>
                     <dt class="sr-only">Price</dt>
                     
-                    <dd class="text-sm text-gray-500">Rp.599.000</dd>
+                    <dd class="text-sm font-bold text-yellow-500">Rp599.000</dd>
                   </div>
                 </dl>
             
@@ -1195,7 +1209,7 @@
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
-                    class="size-4 text-indigo-700"
+                    class="size-4 text-yellow-500"
                 >
                     <path
                         stroke-linecap="round"
@@ -1223,7 +1237,7 @@
                     fill="none" 
                     viewBox="0 0 24 24" 
                     stroke="currentColor" 
-                    class="size-4 text-indigo-700">
+                    class="size-4 text-yellow-500">
                     
                     <path 
                     stroke-width="2" 
@@ -1253,13 +1267,13 @@
                 <dl>
                   <div>
                     
-                    <dd class="font-medium">LOG-ON Hear On 5 </dd>
+                    <dd class="font-bold">LOG-ON Hear On 5 </dd>
                   </div>
                   
                   <div>
                     <dt class="sr-only">Price</dt>
                     
-                    <dd class="text-sm text-gray-500">Rp.199.000</dd>
+                    <dd class="text-sm text-yellow-500 font-bold">Rp199.000</dd>
                   </div>
                 </dl>
             
@@ -1270,7 +1284,7 @@
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
-                    class="size-4 text-indigo-700"
+                    class="size-4 text-yellow-500"
                 >
                     <path
                         stroke-linecap="round"
@@ -1301,7 +1315,7 @@
                     fill="none" 
                     viewBox="0 0 24 24" 
                     stroke="currentColor" 
-                    class="size-4 text-indigo-700">
+                    class="size-4 text-yellow-500">
                     
                     <path 
                     stroke-width="2" 
@@ -1331,13 +1345,13 @@
                 <dl>
                   <div>
                     
-                    <dd class="font-medium">KiiP TH30</dd>
+                    <dd class="font-bold">KiiP TH30</dd>
                   </div>
                   
                   <div>
                     <dt class="sr-only">Price</dt>
                     
-                    <dd class="text-sm text-gray-500">Rp.559.000</dd>
+                    <dd class="text-sm text-yellow-500 font-bold">Rp559.000</dd>
                   </div>
                 </dl>
             
@@ -1348,7 +1362,7 @@
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
-                    class="size-4 text-indigo-700"
+                    class="size-4 text-yellow-500"
                 >
                     <path
                         stroke-linecap="round"
@@ -1379,7 +1393,7 @@
                     fill="none" 
                     viewBox="0 0 24 24" 
                     stroke="currentColor" 
-                    class="size-4 text-indigo-700">
+                    class="size-4 text-yellow-500">
                     
                     <path 
                     stroke-width="2" 
@@ -1411,13 +1425,13 @@
                 <dl>
                   <div>
                     
-                    <dd class="font-medium">ASUS Zephyrus g14</dd>
+                    <dd class="font-bold">ASUS Zephyrus g14</dd>
                   </div>
                   
                   <div>
                     <dt class="sr-only">Price</dt>
                     
-                    <dd class="text-sm text-gray-500">Rp.20.000.000</dd>
+                    <dd class="text-sm text-yellow-500 font-bold">Rp20.000.000</dd>
                   </div>
                 </dl>
             
@@ -1428,7 +1442,7 @@
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
-                    class="size-4 text-indigo-700"
+                    class="size-4 text-yellow-500"
                 >
                     <path
                         stroke-linecap="round"
@@ -1456,7 +1470,7 @@
                     fill="none" 
                     viewBox="0 0 24 24" 
                     stroke="currentColor" 
-                    class="size-4 text-indigo-700">
+                    class="size-4 text-yellow-500">
                     
                     <path 
                     stroke-width="2" 
@@ -1486,13 +1500,13 @@
                 <dl>
                   <div>
                     
-                    <dd class="font-medium">Acer Predator Triton 500SE</dd>
+                    <dd class="font-bold">Acer Predator Triton 500SE</dd>
                   </div>
                   
                   <div>
                     <dt class="sr-only">Price</dt>
                     
-                    <dd class="text-sm text-gray-500">Rp.43.000.000</dd>
+                    <dd class="text-sm text-yellow-500 font-bold">Rp.43.000.000</dd>
                   </div>
                 </dl>
             
@@ -1503,7 +1517,7 @@
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
-                    class="size-4 text-indigo-700"
+                    class="size-4 text-yellow-500"
                 >
                     <path
                         stroke-linecap="round"
@@ -1534,7 +1548,7 @@
                     fill="none" 
                     viewBox="0 0 24 24" 
                     stroke="currentColor" 
-                    class="size-4 text-indigo-700">
+                    class="size-4 text-yellow-500">
                     
                     <path 
                     stroke-width="2" 
@@ -1564,13 +1578,13 @@
                 <dl>
                   <div>
                     
-                    <dd class="font-medium">HUAWEI MateBook 14</dd>
+                    <dd class="font-bold">HUAWEI MateBook 14</dd>
                   </div>
                   
                   <div>
                     <dt class="sr-only">Price</dt>
                     
-                    <dd class="text-sm text-gray-500">Rp.9.999.000</dd>
+                    <dd class="text-sm text-yellow-500 font-bold">Rp9.999.000</dd>
                   </div>
                 </dl>
             
@@ -1581,7 +1595,7 @@
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
-                    class="size-4 text-indigo-700"
+                    class="size-4 text-yellow-500"
                 >
                     <path
                         stroke-linecap="round"
@@ -1600,7 +1614,7 @@
                     <div class="mt-1.5 sm:mt-0">
                       <p class="text-gray-500">Stock</p>
             
-                      <p class="font-medium">15/p>
+                      <p class="font-medium">15</p>
                     </div>
                   </div>
             
@@ -1612,7 +1626,7 @@
                     fill="none" 
                     viewBox="0 0 24 24" 
                     stroke="currentColor" 
-                    class="size-4 text-indigo-700">
+                    class="size-4 text-yellow-500">
                     
                     <path 
                     stroke-width="2" 
@@ -1642,13 +1656,13 @@
                 <dl>
                   <div>
                     
-                    <dd class="font-medium">ASUS ExpertBook B9 B9400</dd>
+                    <dd class="font-bold">ASUS ExpertBook B9 B9400</dd>
                   </div>
                   
                   <div>
                     <dt class="sr-only">Price</dt>
                     
-                    <dd class="text-sm text-gray-500">Rp.26.000.000</dd>
+                    <dd class="text-sm text-yellow-500 font-bold">Rp26.000.000</dd>
                   </div>
                 </dl>
             
@@ -1659,7 +1673,7 @@
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
-                    class="size-4 text-indigo-700"
+                    class="size-4 text-yellow-500"
                 >
                     <path
                         stroke-linecap="round"
@@ -1690,7 +1704,7 @@
                     fill="none" 
                     viewBox="0 0 24 24" 
                     stroke="currentColor" 
-                    class="size-4 text-indigo-700">
+                    class="size-4 text-yellow-500">
                     
                     <path 
                     stroke-width="2" 
@@ -1722,13 +1736,13 @@
                 <dl>
                   <div>
                     
-                    <dd class="font-medium">Logitech Mouse Wireless - G304</dd>
+                    <dd class="font-bold">Logitech Mouse Wireless - G304</dd>
                   </div>
                   
                   <div>
                     <dt class="sr-only">Price</dt>
                     
-                    <dd class="text-sm text-gray-500">Rp.800.000</dd>
+                    <dd class="text-sm text-yellow-500 font-bold">Rp800.000</dd>
                   </div>
                 </dl>
             
@@ -1739,7 +1753,7 @@
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
-                    class="size-4 text-indigo-700"
+                    class="size-4 text-yellow-500"
                 >
                     <path
                         stroke-linecap="round"
@@ -1770,7 +1784,7 @@
                     fill="none" 
                     viewBox="0 0 24 24" 
                     stroke="currentColor" 
-                    class="size-4 text-indigo-700">
+                    class="size-4 text-yellow-500">
                     
                     <path 
                     stroke-width="2" 
@@ -1800,13 +1814,13 @@
                 <dl>
                   <div>
                     
-                    <dd class="font-medium">JOYSEUS MS0003</dd>
+                    <dd class="font-bold">JOYSEUS MS0003</dd>
                   </div>
                   
                   <div>
                     <dt class="sr-only">Price</dt>
                     
-                    <dd class="text-sm text-gray-500">Rp.120.000</dd>
+                    <dd class="text-sm text-yellow-500 font-bold">Rp120.000</dd>
                   </div>
                 </dl>
             
@@ -1817,7 +1831,7 @@
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
-                    class="size-4 text-indigo-700"
+                    class="size-4 text-yellow-500"
                 >
                     <path
                         stroke-linecap="round"
@@ -1845,7 +1859,7 @@
                     fill="none" 
                     viewBox="0 0 24 24" 
                     stroke="currentColor" 
-                    class="size-4 text-indigo-700">
+                    class="size-4 text-yellow-500">
                     
                     <path 
                     stroke-width="2" 
@@ -1875,13 +1889,13 @@
                 <dl>
                   <div>
                     
-                    <dd class="font-medium">Prolink GM-2001</dd>
+                    <dd class="font-bold">Prolink GM-2001</dd>
                   </div>
                   
                   <div>
                     <dt class="sr-only">Price</dt>
                     
-                    <dd class="text-sm text-gray-500">Rp.270.000</dd>
+                    <dd class="text-sm text-yellow-500 font-bold">Rp270.000</dd>
                   </div>
                 </dl>
             
@@ -1892,7 +1906,7 @@
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
-                    class="size-4 text-indigo-700"
+                    class="size-4 text-yellow-500"
                 >
                     <path
                         stroke-linecap="round"
@@ -1923,7 +1937,7 @@
                     fill="none" 
                     viewBox="0 0 24 24" 
                     stroke="currentColor" 
-                    class="size-4 text-indigo-700">
+                    class="size-4 text-yellow-500">
                     
                     <path 
                     stroke-width="2" 
@@ -1953,13 +1967,13 @@
                 <dl>
                   <div>
                     
-                    <dd class="font-medium">Logitech G102 Prodigy</dd>
+                    <dd class="font-bold">Logitech G102 Prodigy</dd>
                   </div>
                   
                   <div>
                     <dt class="sr-only">Price</dt>
                     
-                    <dd class="text-sm text-gray-500">Rp.380.000</dd>
+                    <dd class="text-sm text-yellow-500 font-bold">Rp380.000</dd>
                   </div>
                 </dl>
             
@@ -1970,7 +1984,7 @@
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
-                    class="size-4 text-indigo-700"
+                    class="size-4 text-yellow-500"
                 >
                     <path
                         stroke-linecap="round"
@@ -2001,7 +2015,7 @@
                     fill="none" 
                     viewBox="0 0 24 24" 
                     stroke="currentColor" 
-                    class="size-4 text-indigo-700">
+                    class="size-4 text-yellow-500">
                     
                     <path 
                     stroke-width="2" 
@@ -2033,13 +2047,13 @@
                 <dl>
                   <div>
                     
-                    <dd class="font-medium">ASUS RTX 2060 DUAL EVO OC 6GB</dd>
+                    <dd class="font-bold">ASUS RTX 2060 DUAL EVO OC 6GB</dd>
                   </div>
                   
                   <div>
                     <dt class="sr-only">Price</dt>
                     
-                    <dd class="text-sm text-gray-500">Rp.4.500.000</dd>
+                    <dd class="text-sm text-yellow-500 font-bold">Rp4.500.000</dd>
                   </div>
                 </dl>
             
@@ -2050,7 +2064,7 @@
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
-                    class="size-4 text-indigo-700"
+                    class="size-4 text-yellow-500"
                 >
                     <path
                         stroke-linecap="round"
@@ -2081,7 +2095,7 @@
                     fill="none" 
                     viewBox="0 0 24 24" 
                     stroke="currentColor" 
-                    class="size-4 text-indigo-700">
+                    class="size-4 text-yellow-500">
                     
                     <path 
                     stroke-width="2" 
@@ -2111,13 +2125,13 @@
                 <dl>
                   <div>
                     
-                    <dd class="font-medium">Ryzen 7 5700G </dd>
+                    <dd class="font-bold">Ryzen 7 5700G </dd>
                   </div>
                   
                   <div>
                     <dt class="sr-only">Price</dt>
                     
-                    <dd class="text-sm text-gray-500">Rp.4.000.000</dd>
+                    <dd class="text-sm font-bold text-yellow-500">Rp4.000.000</dd>
                   </div>
                 </dl>
             
@@ -2128,7 +2142,7 @@
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
-                    class="size-4 text-indigo-700"
+                    class="size-4 text-yellow-500"
                 >
                     <path
                         stroke-linecap="round"
@@ -2156,7 +2170,7 @@
                     fill="none" 
                     viewBox="0 0 24 24" 
                     stroke="currentColor" 
-                    class="size-4 text-indigo-700">
+                    class="size-4 text-yellow-500">
                     
                     <path 
                     stroke-width="2" 
@@ -2186,13 +2200,13 @@
                 <dl>
                   <div>
                     
-                    <dd class="font-medium">SSD ADATA XPG GAMMIX S70 BLADE</dd>
+                    <dd class="font-bold">SSD ADATA XPG GAMMIX S70 BLADE</dd>
                   </div>
                   
                   <div>
                     <dt class="sr-only">Price</dt>
                     
-                    <dd class="text-sm text-gray-500">Rp.2.599.000</dd>
+                    <dd class="text-sm text-yellow-500 font-bold">Rp.2.599.000</dd>
                   </div>
                 </dl>
             
@@ -2203,7 +2217,7 @@
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
-                    class="size-4 text-indigo-700"
+                    class="size-4 text-yellow-500"
                 >
                     <path
                         stroke-linecap="round"
@@ -2234,7 +2248,7 @@
                     fill="none" 
                     viewBox="0 0 24 24" 
                     stroke="currentColor" 
-                    class="size-4 text-indigo-700">
+                    class="size-4 text-yellow-500">
                     
                     <path 
                     stroke-width="2" 
@@ -2264,13 +2278,13 @@
                 <dl>
                   <div>
                     
-                    <dd class="font-medium">ASUS PRIME H410M-K</dd>
+                    <dd class="font-bold">ASUS PRIME H410M-K</dd>
                   </div>
                   
                   <div>
                     <dt class="sr-only">Price</dt>
                     
-                    <dd class="text-sm text-gray-500">Rp.1.155.000</dd>
+                    <dd class="text-sm text-yellow-500 font-bold">Rp1.155.000</dd>
                   </div>
                 </dl>
             
@@ -2281,7 +2295,7 @@
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
-                    class="size-4 text-indigo-700"
+                    class="size-4 text-yellow-500"
                 >
                     <path
                         stroke-linecap="round"
@@ -2312,7 +2326,7 @@
                     fill="none" 
                     viewBox="0 0 24 24" 
                     stroke="currentColor" 
-                    class="size-4 text-indigo-700">
+                    class="size-4 text-yellow-500">
                     
                     <path 
                     stroke-width="2" 
@@ -2335,20 +2349,20 @@
           
 
           <!-- Services -->
-          <div class="w-full inline-block align-middle justify-center" id="Services" >
-            <section class="my-48 " >
+          <div class="w-full inline-block align-middle justify-center " id="Services" >
+            <section class="my-48 bg-gray-200" >
               <div class="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16 shadow-lg">
                 <div class="mx-auto max-w-lg text-center " >
 
-                  <h2 class="text-3xl mb-10 text-slate-600 font-bold sm:text-4xl">Step By Step</h2>
+                  <h2 class="text-3xl mb-10 text-zinc-600 font-bold sm:text-4xl">Step By Step</h2>
                   <div>                  
                     <div>
                       <div class="overflow-hidden rounded-full bg-gray-200">
-                        <div class="h-2 w-1/2 rounded-full bg-blue-500"></div>
+                        <div class="h-2 w-1/2 rounded-full bg-yellow-400"></div>
                       </div>
                   
                       <ol class="mt-4 grid grid-cols-3 text-sm font-medium text-gray-500">
-                        <li class="flex items-center justify-start text-blue-600 sm:gap-1.5">
+                        <li class="flex items-center justify-start text-yellow-500 sm:gap-1.5">
                           <span class="hidden sm:inline"> Details </span>
                   
                           <svg
@@ -2367,7 +2381,7 @@
                           </svg>
                         </li>
                   
-                        <li class="flex items-center justify-center text-blue-600 sm:gap-1.5">
+                        <li class="flex items-center justify-center text-yellow-500 sm:gap-1.5">
                           <span class="hidden sm:inline"> Address </span>
                   
                           <svg
@@ -2420,14 +2434,15 @@
                     <ol
                       class="grid grid-cols-1 divide-x divide-gray-100 overflow-hidden rounded-lg border border-gray-100 text-sm text-gray-500 sm:grid-cols-3"
                     >
-                      <li class="flex items-center justify-center gap-2 p-4">
+                      <li class="flex items-center justify-center bg-zinc-500 gap-2 p-4">
                         <svg
                           class="size-7 shrink-0"
                           xmlns="http://www.w3.org/2000/svg"
-                          fill="none"
+                          fill="#000000"
                           viewBox="0 0 24 24"
                           stroke="currentColor"
                           stroke-width="2"
+                          
                         >
                           <path
                             stroke-linecap="round"
@@ -2436,13 +2451,13 @@
                           />
                         </svg>
 
-                        <p class="leading-none">
-                          <strong class="block font-medium"> Details </strong>
-                          <small class="mt-1"> Some info about you. </small>
+                        <p class="leading-none text-white">
+                          <strong class="block font-medium text-yellow-300"> Details </strong>
+                          <small class="mt-1 text-slate-200"> Some info about you. </small>
                         </p>
                       </li>
 
-                      <li class="relative flex items-center justify-center gap-2 bg-gray-50 p-4">
+                      <li class="relative flex items-center justify-center gap-2 bg-yellow-400 p-4">
                         <span
                           class="absolute -left-2 top-1/2 hidden size-4 -translate-y-1/2 rotate-45 border border-gray-100 sm:block ltr:border-b-0 ltr:border-s-0 ltr:bg-white rtl:border-e-0 rtl:border-t-0 rtl:bg-gray-50"
                         >
@@ -2474,16 +2489,16 @@
                         </svg>
 
                         <p class="leading-none">
-                          <strong class="block font-medium"> Address </strong>
-                          <small class="mt-1"> Where we sending it? </small>
+                          <strong class="block font-medium text-black"> Address </strong>
+                          <small class="mt-1 text-slate-700"> Where we sending it? </small>
                         </p>
                       </li>
 
-                      <li class="flex items-center justify-center gap-2 p-4">
+                      <li class="flex items-center justify-center bg-zinc-500 gap-2 p-4">
                         <svg
                           class="size-7 shrink-0"
                           xmlns="http://www.w3.org/2000/svg"
-                          fill="none"
+                          fill="#000000"
                           viewBox="0 0 24 24"
                           stroke="currentColor"
                           stroke-width="2"
@@ -2496,8 +2511,8 @@
                         </svg>
 
                         <p class="leading-none">
-                          <strong class="block font-medium"> Payment </strong>
-                          <small class="mt-1"> Show us the money. </small>
+                          <strong class="block font-medium text-yellow-400"> Payment </strong>
+                          <small class="mt-1 text-slate-200"> Show us the money. </small>
                         </p>
                       </li>
                     </ol>
