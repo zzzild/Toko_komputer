@@ -12,7 +12,6 @@
       body {
         scroll-behavior: smooth;
       }
-
       
     </style>
     
@@ -61,7 +60,7 @@
                 <div class="sm:flex sm:gap-4">
                   <a
                     class="rounded-md bg-yellow-400 px-5 py-2.5 text-sm font-medium text-black shadow"
-                    href="#"
+                    href="/public/login.html"
                   >
                   Login
                   </a>
@@ -69,7 +68,7 @@
                   <div class="hidden sm:flex">
                     <a
                       class="rounded-md bg-black px-5 py-2.5 text-sm font-medium text-yellow-400"
-                      href="#"
+                      href="/public/regist.html"
                     >
                       Register
                     </a>
@@ -494,11 +493,13 @@
           <h2 class="font-bold text-zinc-600 text-xl my-8" id="Product">Explore our Products</h2>
           <div class="container gap-y-3 sm:flex sm:flex-wrap flex items-center justify-center " >
             <!-- Keyboard -->
-            <a href="#"  class="block rounded-lg p-4 shadow-xl hover:shadow-lg hover:shadow-indigo-300 transition-shadow duration-300 delay-100  shadow-indigo-100 w-80 ">
+            <a onclick="popUp('resource/product/keyboard1.jpg', 'YUNZII Keynovo IF98', 'Rp2.950.000', 'The IF98 is a Gasket mount hot-swappable mechanical keyboard in exciting color schemes and Gateron switches. Designed for high productivity in a compact size, the IF98 1800 layout has a 98-key.')"
+            class="block rounded-lg p-4 shadow-xl hover:shadow-lg hover:shadow-indigo-300 transition-shadow duration-300 delay-100  shadow-indigo-100 w-80 ">
               <img
                 alt=""
                 src="resource/product/keyboard1.jpg"
                 class="h-56 w-full rounded-md object-cover"
+                
               />
               <div class="mt-2 ">
                 <dl>
@@ -2526,13 +2527,52 @@
               </div>
             </section>
           </div>
+
+          
             </div>    
           </div>
         </div>
       </div>
 
-      <!-- FOOTER -->
+      <div  style="display: none;" id="popup">
+      <div class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50" id="popup-overlay">
+        <!-- Popup Content -->
+      <section class="overflow-hidden bg-white rounded-xl shadow-5xl md:grid md:grid-cols-3  max-w-5xl"  >
+        <img
+          alt=""
+          src=""
+          class="h-32 w-full object-cover md:h-full"
+          id="popup-image" 
+        />
       
+        <div class="p-4 text-center align-middle sm:p-6 md:col-span-2 lg:p-8">
+          
+          <h1 class="mt-2  uppercase" id="popup-brand">
+            <span class="text-9xl font-serif sm:text-5xl lg:text-9xl">  </span>
+            
+            <span class="mt-2 block text-sm">On your next order over $50</span>
+          </h1>
+          
+          <p class="text-sm font-bold uppercase tracking-widest text-yellow-500 " id="popup-price">Run with the pack</p>
+
+          <p class="mt-8 text-xs font-medium uppercase text-gray-400" id="popup-des">
+            Offer valid until 24th March, 2021 *
+          </p>
+      
+          <a
+            class="mt-8 rounded inline-block w-full bg-black py-4 text-sm font-bold uppercase tracking-widest text-yellow-400 hover:bg-yellow-400 hover:text-black"
+            href="#"
+          >
+            Order Now
+          </a>
+      
+          
+        </div>
+      </section>
+    </div>
+  </div>
+
+      <!-- FOOTER -->
         <footer class="bg-zinc-800">
           <div class="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
             <div class="gap-2 grid grid-cols-1 lg:grid-cols-3 lg:gap-8">
@@ -2608,11 +2648,6 @@
       
 
 
-      <script src="js/main.js"></script>
-      <script>
-        
-      </script>
-
-      
+      <script src="js/main.js"></script>  
 </body>
 </html>
