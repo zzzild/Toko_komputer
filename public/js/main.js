@@ -6,6 +6,7 @@ let popupPrice = document.getElementById("popup-price");
 let popupDes = document.getElementById("popup-des");
 
 function popUp(image, brand, price, Des) {
+  localStorage.setItem('selectedProduct', JSON.stringify({ brand, price }));
   popupImage.src = image;
   popupBrand.innerHTML = brand;
   popupPrice.innerHTML = price;
@@ -16,3 +17,7 @@ function popUp(image, brand, price, Des) {
 popup.addEventListener('click', function(event) {
   this.style.display = 'none';
 })
+
+function redirectToForm() {
+  window.location.href = '/form';
+}
