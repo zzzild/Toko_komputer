@@ -12,10 +12,9 @@ app.set("view engine", "ejs")
 app.set('views', path.join(__dirname, 'views'));
 
 app.get('/form', (req, res) => {
-    res.render('form', { title: 'Halaman Formulir' });
+    res.render('form', { title: 'SUBMIT A REQUEST' });
   });
-
-
+  
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/view.html', (req, res) => {
@@ -41,18 +40,30 @@ db.connect((err) => {
     if(err) throw err
     console.log("database connected....")
 
+    // Delete Data
+    app.delete("/delete/:id", (req, res) => {
+        const id = req.params.id;
+        const sql = `DELETE FROM orderan_masuk WHERE id_orderan = ${id}`;
+        db.query(sql, (err, result) => {
+            if (err) {
+                res.status(500).send("Internal Server Error");
+                throw err;
+            }
+            console.log(`Data with ID ${id} has been deleted.`);
+            res.redirect("/");
+        });
+    });
     
-    // Get data
+    // Get Data
     app.get("/", (req, res) => {
         const sql = 'SELECT * FROM orderan_masuk'
         db.query(sql, (err,result) => {
             const order = JSON.parse(JSON.stringify(result))
-            console.log("hasil database ->", order)
             res.render("admin", {order: order, title: "Admin dashboard"})
         })    
     })
 
-    // POST DATA
+    // Post Data
     app.post("/tambah", (req, res) => {
         const insertSql = `INSERT INTO orderan_masuk (nama_pembeli, email_pembeli, no_handphone, alamat, nama_barang, harga) VALUES ('${req.body.nama}', '${req.body.email}', '${req.body.noHp}', '${req.body.alamat}', '${req.body.namaBarang}', '${req.body.harga}');`
         db.query(insertSql, (err, result) => {
