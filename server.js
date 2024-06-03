@@ -56,12 +56,52 @@ db.connect((err) => {
     
     // Get Data
     app.get("/", (req, res) => {
-        const sql = 'SELECT * FROM orderan_masuk'
-        db.query(sql, (err,result) => {
-            const order = JSON.parse(JSON.stringify(result))
-            res.render("admin", {order: order, title: "Admin dashboard"})
-        })    
-    })
+        const sqlOrder = 'SELECT * FROM orderan_masuk';
+        const sqlPegawai = 'SELECT * FROM pegawai';
+        const sqlCs = 'SELECT * FROM customer_service';
+        const sqlBarang = 'SELECT * FROM barang';
+        const sqlSupplier = 'SELECT * FROM supplier';
+        
+        db.query(sqlOrder, (errOrder, resultOrder) => {
+            if (errOrder) {
+                return res.status(500).send(errOrder);
+            }
+            const order = JSON.parse(JSON.stringify(resultOrder));
+            
+            db.query(sqlPegawai, (errPegawai, resultPegawai) => {
+                if (errPegawai) {
+                    return res.status(500).send(errPegawai);
+                }
+                const pegawai = JSON.parse(JSON.stringify(resultPegawai));
+
+                db.query(sqlCs, (errCs, resultCs) => {
+                    if (errCs){
+                        return res.status(500).send(errCs);
+                    }
+                    const cs =  JSON.parse(JSON.stringify(resultCs));
+                    
+                    db.query(sqlBarang, (errBarang, resultBarang) => {
+                        if (errBarang){
+                            return res.status(500).send(errBarang);
+                        }
+                        const barang = JSON.parse(JSON.stringify(resultBarang));
+
+                        db.query(sqlSupplier, (errSupl, resultSupl) =>{
+                            if (errSupl){
+                                return res.status(500).send(errSupl);
+                            }
+                            const supplier = JSON.parse(JSON.stringify(resultSupl));
+                            res.render("admin", { order: order, pegawai: pegawai, cs: cs, barang: barang,supplier: supplier  ,title: "Orderan History" });
+                        })
+
+                    })
+
+                })
+                
+            });
+        });
+    });
+    
 
     // Post Data
     app.post("/tambah", (req, res) => {
