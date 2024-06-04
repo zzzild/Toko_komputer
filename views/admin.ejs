@@ -58,7 +58,7 @@
     </div>
   </header>
   
-  <div class="flex h-screen bg-gray-100">
+  <div class="flex h-full bg-gray-100">
     <div class="px-5 py-6 w-64 bg-white shadow-md">
       <div class="text-center sm:text-center py-4 bg-zinc-600 shadow-sm rounded-md">
         <h1 class="text-2xl animate-bounce duration-100 font-bold text-white sm:text-3xl font-mono">uhuy<span class="text-yellow-400">.com</span></h1>
@@ -67,7 +67,7 @@
       <ul class="mt-6 space-y-1">
         <li> 
           <a href="#" class="menu-link block mt-5 mb-3 rounded-lg bg-gray-100 px-4 py-2 text-md font-medium text-gray-500 hover:bg-yellow-400 hover:text-text-gray-500 active:bg-yellow-400 active:text-text-gray-500 transition duration-300 ease-in-out" data-content="orderan">
-            Order History
+            New Order
           </a>
         </li>
   
@@ -211,6 +211,12 @@
                                 >
                                     Delete
                                 </button>
+                                <button
+                                    class="inline-block rounded bg-green-600 px-4 py-2 text-xs font-medium text-white hover:bg-red-700 transition duration-200"
+                                    onclick="acceptOrder('<%= orderan.id_orderan %>')"
+                                >
+                                    Accept
+                                </button>
                             </td>
                         </tr>
                         <% } %>
@@ -302,8 +308,8 @@
       <!-- stock page -->
       <div class="page-content" id="stock">
         <div class="container mx-auto mt-3">
-          <h1 class="my-2 text-yellow-400 tracking-wide font-extrabold uppercase text-2xl md:text-4xl lg:text-5xl">Stock Item</h1>
-            <h3 class="text-lg font-semibold text-slate-400">Streamline your customer service operations and track your team's progress with precision.</h3>
+          <h1 class="my-2 text-yellow-400 tracking-wide font-extrabold uppercase text-2xl md:text-4xl lg:text-5xl">Stock Items</h1>
+            <h3 class="text-lg font-semibold text-slate-400">Streamline your inventory management and track your stock items with precision.</h3>
     
             <div class="overflow-x-auto mt-6">
                 <table class="min-w-full bg-white border border-gray-200">
@@ -344,8 +350,8 @@
       <!-- supplier page -->
       <div class="page-content" id="supplier">
         <div class="container mx-auto mt-3">
-          <h1 class="my-2 text-yellow-400 tracking-wide font-extrabold uppercase text-2xl md:text-4xl lg:text-5xl">Stock Item</h1>
-            <h3 class="text-lg font-semibold text-slate-400">Streamline your customer service operations and track your team's progress with precision.</h3>
+          <h1 class="my-2 text-yellow-400 tracking-wide font-extrabold uppercase text-2xl md:text-4xl lg:text-5xl">Supplier</h1>
+            <h3 class="text-lg font-semibold text-slate-400">Enhance your supplier operations and monitor your supplier relationships with accuracy.</h3>
     
             <div class="overflow-x-auto mt-6">
                 <table class="min-w-full bg-white border border-gray-200">
@@ -385,17 +391,129 @@
 
       <!-- customer page -->
       <div class="page-content" id="customer">
-        <h1>customer</h1>
+        <div class="container mx-auto mt-3">
+          <h1 class="my-2 text-yellow-400 tracking-wide font-extrabold uppercase text-2xl md:text-4xl lg:text-5xl">Customer</h1>
+            <h3 class="text-lg font-semibold text-slate-400">Enhance your supplier operations and monitor your supplier relationships with accuracy.</h3>
+    
+            <div class="overflow-x-auto mt-6">
+                <table class="min-w-full bg-white border border-gray-200">
+                    <thead>
+                        <tr class="bg-gray-100 border-b border-gray-200">
+                            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Nama</th>
+                            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Alamat</th>
+                            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">No Telpon</th>
+                            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Email</th>
+                            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Option</th>
+                        </tr>
+                    </thead>
+                    <tbody class="bg-white divide-y divide-gray-200">
+                        <% for (let cuss of customer) { %>
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700"><%= cuss.nama %></td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700"><%= cuss.alamat %></td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700"><%= cuss.no_telp %></td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700"><%= cuss.email %></td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700">
+                                <button
+                                    class="inline-block rounded bg-red-500 px-4 py-2 text-xs font-medium text-white hover:bg-red-700 transition duration-200"
+                                    onclick="deleteItem('<%= cuss.id_pelanggan %>')"
+                                >
+                                    Delete
+                                </button>
+                            </td>
+                        </tr>
+                        <% } %>
+                    </tbody>
+                </table>
+            </div>
+        </div>
       </div>
 
       <!-- invoices page -->
       <div class="page-content" id="invoices">
-        <h1>invoices</h1>
+        <div class="container mx-auto mt-3">
+          <h1 class="my-2 text-yellow-400 tracking-wide font-extrabold uppercase text-2xl md:text-4xl lg:text-5xl">Invoice</h1>
+            <h3 class="text-lg font-semibold text-slate-400">Enhance your supplier operations and monitor your supplier relationships with accuracy.</h3>
+    
+            <div class="overflow-x-auto mt-6">
+                <table class="min-w-full bg-white border border-gray-200">
+                    <thead>
+                        <tr class="bg-gray-100 border-b border-gray-200">
+                            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">No_Invoice</th>
+                            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">id_order</th>
+                            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Total Price</th>
+                            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">date</th>
+                            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Option</th>
+                        </tr>
+                    </thead>
+                    <tbody class="bg-white divide-y divide-gray-200">
+                        <% for (let Invoice of invoices) { %>
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700"><%= Invoice.No_Invoice %></td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700"><%= Invoice.id_order %></td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700"><%= Invoice.jumlah_harga %></td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700"><%= new Date(Invoice.date).toLocaleDateString('en-US', { year: 'numeric', month: '2-digit', day: '2-digit' }) %></td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700">
+                                <button
+                                    class="inline-block rounded bg-red-500 px-4 py-2 text-xs font-medium text-white hover:bg-red-700 transition duration-200"
+                                    onclick="deleteItem('<%= Invoice.No_Invoice %>')"
+                                >
+                                    Delete
+                                </button>
+                                <button
+                                    class="inline-block rounded bg-blue-500 px-4 py-2 text-xs font-medium text-white hover:bg-red-700 transition duration-200"
+                                    onclick=""
+                                >
+                                    Send
+                                </button>
+                            </td>
+                        </tr>
+                        <% } %>
+                    </tbody>
+                </table>
+            </div>
+        </div>
       </div>
 
       <!-- details -->
       <div class="page-content" id="details">
-        <h1>detail</h1>
+        <div class="container mx-auto mt-3">
+          <h1 class="my-2 text-yellow-400 tracking-wide font-extrabold uppercase text-2xl md:text-4xl lg:text-5xl">Order Process</h1>
+            <h3 class="text-lg font-semibold text-slate-400">Enhance your supplier operations and monitor your supplier relationships with accuracy.</h3>
+    
+            <div class="overflow-x-auto mt-6">
+                <table class="min-w-full bg-white border border-gray-200">
+                    <thead>
+                        <tr class="bg-gray-100 border-b border-gray-200">
+                            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">id_order</th>
+                            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">id_cs</th>
+                            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">id_orderan</th>
+                            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Name</th>
+                            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Option</th>
+                        </tr>
+                    </thead>
+                    <tbody class="bg-white divide-y divide-gray-200">
+                        <% for (let order_proses of orders) { %>
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700"><%= order_proses.id_order %></td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700"><%= order_proses.id_cs %></td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700"><%= order_proses.id_pelanggan %></td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700"><%= order_proses.nama_pelanggan %></td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700">
+                                <button
+                                    class="inline-block rounded bg-red-500 px-4 py-2 text-xs font-medium text-white hover:bg-red-700 transition duration-200"
+                                    onclick="deleteItem('<%= order_proses.id_order %>')"
+                                >
+                                    Delete
+                                </button>
+                            </td>
+                        </tr>
+                        <% } %>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+      </div>
       </div>
 
       <!-- security -->
@@ -429,6 +547,8 @@
                 });
             }
           }
+
+          
 
         document.addEventListener("DOMContentLoaded", function () {
         const menuLinks = document.querySelectorAll(".menu-link");

@@ -55,54 +55,44 @@ db.connect((err) => {
     });
     
     // Get Data
-    app.get("/", (req, res) => {
-        const sqlOrder = 'SELECT * FROM orderan_masuk';
-        const sqlPegawai = 'SELECT * FROM pegawai';
-        const sqlCs = 'SELECT * FROM customer_service';
-        const sqlBarang = 'SELECT * FROM barang';
-        const sqlSupplier = 'SELECT * FROM supplier';
-        
-        db.query(sqlOrder, (errOrder, resultOrder) => {
-            if (errOrder) {
-                return res.status(500).send(errOrder);
-            }
-            const order = JSON.parse(JSON.stringify(resultOrder));
-            
-            db.query(sqlPegawai, (errPegawai, resultPegawai) => {
-                if (errPegawai) {
-                    return res.status(500).send(errPegawai);
-                }
-                const pegawai = JSON.parse(JSON.stringify(resultPegawai));
-
-                db.query(sqlCs, (errCs, resultCs) => {
-                    if (errCs){
-                        return res.status(500).send(errCs);
-                    }
-                    const cs =  JSON.parse(JSON.stringify(resultCs));
-                    
-                    db.query(sqlBarang, (errBarang, resultBarang) => {
-                        if (errBarang){
-                            return res.status(500).send(errBarang);
-                        }
-                        const barang = JSON.parse(JSON.stringify(resultBarang));
-
-                        db.query(sqlSupplier, (errSupl, resultSupl) =>{
-                            if (errSupl){
-                                return res.status(500).send(errSupl);
-                            }
-                            const supplier = JSON.parse(JSON.stringify(resultSupl));
-                            res.render("admin", { order: order, pegawai: pegawai, cs: cs, barang: barang,supplier: supplier  ,title: "Orderan History" });
-                        })
-
-                    })
-
-                })
-                
+    app.get("/", async (req, res) => {
+        const queries = {
+            order: 'SELECT * FROM orderan_masuk',
+            pegawai: 'SELECT * FROM pegawai',
+            cs: 'SELECT * FROM customer_service',
+            barang: 'SELECT * FROM barang',
+            supplier: 'SELECT * FROM supplier',
+            customer: 'SELECT * FROM pelanggan',
+            orders: 'SELECT * FROM orders',
+            invoices: 'SELECT * FROM invoice'
+        };
+    
+        try {
+            const results = await Promise.all(Object.values(queries).map(query => new Promise((resolve, reject) => {
+                db.query(query, (err, result) => {
+                    if (err) reject(err);
+                    else resolve(result);
+                });
+            })));
+    
+            const [order, pegawai, cs, barang, supplier, customer, orders, invoices] = results.map(result => JSON.parse(JSON.stringify(result)));
+    
+            res.render("admin", { 
+                order, 
+                pegawai, 
+                cs, 
+                barang, 
+                supplier,
+                customer,
+                orders,
+                invoices,
+                title: "Orderan History" 
             });
-        });
+        } catch (err) {
+            res.status(500).send(err);
+        }
     });
     
-
     // Post Data
     app.post("/tambah", (req, res) => {
         const insertSql = `INSERT INTO orderan_masuk (nama_pembeli, email_pembeli, no_handphone, alamat, nama_barang, harga) VALUES ('${req.body.nama}', '${req.body.email}', '${req.body.noHp}', '${req.body.alamat}', '${req.body.namaBarang}', '${req.body.harga}');`
@@ -111,6 +101,7 @@ db.connect((err) => {
             res.redirect("/");
         })
     })
+    
 
     
 })
