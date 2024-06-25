@@ -13,7 +13,19 @@ app.set('views', path.join(__dirname, 'views'));
 
 app.get('/form', (req, res) => {
     res.render('form', { title: 'SUBMIT A REQUEST' });
-  });
+});
+
+app.get('/addEmplys', (req, res) => {
+    res.render('addEmplys', { title: 'ADD EMPLOYEES' });
+});
+
+app.get('/addCs', (req, res) => {
+    res.render('addCs', { title: 'ADD NEW CUSTOMER SERVICE' });
+});
+
+app.get('/addSupp', (req, res) => {
+    res.render('addSupp', { title: 'ADD NEW SUPPLIER' });
+});
   
 app.use(express.static(path.join(__dirname, 'public')));
 
@@ -102,6 +114,30 @@ db.connect((err) => {
         })
     })
     
+
+    app.post("/supplier", (req, res) => {
+        const insertSql = `INSERT INTO supplier (kode_supplier, nama_supplier, alamat, no_telp, email) VALUES ('${req.body.kd_supplier}', '${req.body.nama}', '${req.body.alamat}', '${req.body.noHp}', '${req.body.email}');`
+        db.query(insertSql ,(err, result) => {
+            if(err) throw err
+            res.redirect("/");
+        })
+    })
+
+    app.post("/employees", (req, res) => {
+        const insertSql = `INSERT INTO pegawai (nama, alamat, jobdesk, gaji) VALUES ('${req.body.nama}', '${req.body.alamat}','${req.body.jobdesk}', '${req.body.gaji}')`
+        db.query(insertSql, (err, result) => {
+            if(err) throw err
+            res.redirect("/")
+        })
+    })
+
+    app.post("/cs", (req, res) => {
+        const insertSql = `INSERT INTO customer_service (nama, alamat, gaji) VALUES ('${req.body.nama}', '${req.body.alamat}', '${req.body.gaji}')`
+        db.query(insertSql , (err, result) => {
+            if(err) throw err
+            res.redirect("/")
+        })
+    })
 
     
 })
