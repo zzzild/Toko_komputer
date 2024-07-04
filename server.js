@@ -10,6 +10,7 @@ app.use(express.static("public"));
 app.set("view engine", "ejs")
 
 app.set('views', path.join(__dirname, 'views'));
+app.use(express.static(path.join(__dirname, 'views')));
 
 app.get('/form', (req, res) => {
     res.render('form', { title: 'SUBMIT A REQUEST' });
@@ -65,7 +66,33 @@ db.connect((err) => {
             res.redirect("/");
         });
     });
-    
+
+    app.delete("/deleteEmply/:id", (req, res) => {
+        const id = req.params.id;
+        const sql = `DELETE FROM pegawai WHERE kode_pegawai = ${id}`;
+        db.query(sql, (err, result) => {
+            if (err) {
+                res.status(500).send("Internal Server Error");
+                throw err;
+            }
+            console.log(`Data with ID ${id} has been deleted.`);
+            res.redirect("/");
+        });
+    });
+
+    app.delete("/deleteCs/:id", (req, res) => {
+        const id = req.params.id;
+        const sql = `DELETE FROM customer_service WHERE id_cs = ${id}`;
+        db.query(sql, (err, result) => {
+            if (err) {
+                res.status(500).send("Internal Server Error");
+                throw err;
+            }
+            console.log(`Data with ID ${id} has been deleted.`);
+            res.redirect("/");
+        });
+    });
+
     // Get Data
     app.get("/", async (req, res) => {
         const queries = {

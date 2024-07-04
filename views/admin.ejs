@@ -213,7 +213,7 @@
                                 </button>
                                 <button
                                     class="inline-block rounded bg-green-600 px-4 py-2 text-xs font-medium text-white hover:bg-green-700 transition duration-200"
-                                    onclick="acceptOrder('<%= orderan.id_orderan %>')"
+                                    onclick="generateOrder('<%= orderan.id_orderan %>','<%= orderan.nama_pembeli %>', '<%= orderan.email_pembeli %>', '<%= orderan.no_handphone %>', '<%= orderan.alamat %>', '<%= orderan.nama_barang %>' , '<%= orderan.harga %>')"
                                 >
                                     Accept
                                 </button>
@@ -222,6 +222,9 @@
                         <% } %>
                     </tbody>
                 </table>
+
+                <iframe id="print-iframe" style="display: none;"></iframe>
+
             </div>
         </div>
     </div>
@@ -254,7 +257,7 @@
                             <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700">
                                 <button
                                     class="inline-block rounded bg-red-500 px-4 py-2 text-xs font-medium text-white hover:bg-red-700 transition duration-200"
-                                    onclick="deleteItem('<%= employe.kode_pegawai %>')"
+                                    onclick="deleteEmply('<%= employe.kode_pegawai %>')"
                                 >
                                     Delete
                                 </button>
@@ -292,7 +295,7 @@
                             <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700">
                                 <button
                                     class="inline-block rounded bg-red-500 px-4 py-2 text-xs font-medium text-white hover:bg-red-700 transition duration-200"
-                                    onclick="deleteItem('<%= customer_service.id_cs %>')"
+                                    onclick="deleteCs('<%= customer_service.id_cs %>')"
                                 >
                                     Delete
                                 </button>
@@ -362,7 +365,7 @@
                             <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Alamat</th>
                             <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">No Telpon</th>
                             <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Email</th>
-                            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Option</th>
+                          
                         </tr>
                     </thead>
                     <tbody class="bg-white divide-y divide-gray-200">
@@ -373,14 +376,6 @@
                             <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700"><%= supp.alamat %></td>
                             <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700"><%= supp.no_telp %></td>
                             <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700"><%= supp.email %></td>
-                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700">
-                                <button
-                                    class="inline-block rounded bg-red-500 px-4 py-2 text-xs font-medium text-white hover:bg-red-700 transition duration-200"
-                                    onclick="deleteItem('<%= supp.kode_supplier %>')"
-                                >
-                                    Delete
-                                </button>
-                            </td>
                         </tr>
                         <% } %>
                     </tbody>
@@ -403,7 +398,6 @@
                             <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Alamat</th>
                             <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">No Telpon</th>
                             <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Email</th>
-                            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Option</th>
                         </tr>
                     </thead>
                     <tbody class="bg-white divide-y divide-gray-200">
@@ -413,14 +407,7 @@
                             <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700"><%= cuss.alamat %></td>
                             <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700"><%= cuss.no_telp %></td>
                             <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700"><%= cuss.email %></td>
-                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700">
-                                <button
-                                    class="inline-block rounded bg-red-500 px-4 py-2 text-xs font-medium text-white hover:bg-red-700 transition duration-200"
-                                    onclick="deleteItem('<%= cuss.id_pelanggan %>')"
-                                >
-                                    Delete
-                                </button>
-                            </td>
+                            
                         </tr>
                         <% } %>
                     </tbody>
@@ -462,15 +449,21 @@
                                 </button>
                                 <button
                                     class="inline-block rounded bg-blue-500 px-4 py-2 text-xs font-medium text-white hover:bg-blue-700 transition duration-200"
-                                    onclick=""
+                                    onclick="generateReceipt('<%= Invoice.No_Invoice %>', '<%= Invoice.id_order %>', '<%= Invoice.jumlah_harga %>', '<%= new Date(Invoice.date).toLocaleDateString('id-ID', { year: 'numeric', month: '2-digit', day: '2-digit' }) %>')"
                                 >
-                                    Send
+                                    print
                                 </button>
                             </td>
                         </tr>
                         <% } %>
                     </tbody>
                 </table>
+
+                <div id="receipt-container" style="display:none;" class="mt-6 bg-white p-6 rounded-lg shadow-md w-80 flex items-center justify-center">
+                  <div id="receipt-content" class="">
+                  </div>
+                  <button class="inline-block w-full mt-6 rounded bg-blue-500 px-4 py-2 text-xs font-medium text-white hover:bg-blue-700 transition duration-200" onclick="printReceipt()">Cetak</button>
+                </div>
             </div>
         </div>
       </div>
@@ -593,63 +586,6 @@
 </div>
 
 
-    
-
-    <script>
-          function deleteItem(itemId) {
-            if (confirm("Are you sure you want to delete this item?")) {
-                fetch(`/delete/${itemId}`, {
-                    method: 'DELETE'
-                })
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error('Network response was not ok');
-                    }
-                    return response.text();
-                })
-                .then(data => {
-                    console.log(data);
-                    window.location.reload();
-                })
-                .catch(error => {
-                    console.error('There was a problem with your fetch operation:', error);
-                });
-            }
-          }   
-
-        document.addEventListener("DOMContentLoaded", function () {
-        const menuLinks = document.querySelectorAll(".menu-link");
-        const pageContents = document.querySelectorAll(".page-content");
-      
-        pageContents.forEach(function (content) {
-          content.style.display = "none"; // Hide all page contents by default
-        });
-
-        document.getElementById("orderan").style.display = "block";
-
-        menuLinks.forEach(function (link) {
-          link.addEventListener("click", function (e) {
-            e.preventDefault();
-            const contentId = link.getAttribute("data-content");
-            pageContents.forEach(function (content) {
-              content.style.display = "none";
-            });
-            document.getElementById(contentId).style.display = "block";
-          });
-        });
-      });
-
-      let popupOverlay = document.getElementById("popup-overlay");
-      let popup = document.getElementById("popup");
-
-      function popUp(){
-        popup.style.display = 'block';
-      }
-
-      popup.addEventListener('click', function(event) {
-        this.style.display = 'none';
-      })
-
-    </script>
+    <script src="js/admin.js"></script>
 </body>
 </html>
