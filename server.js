@@ -134,12 +134,24 @@ db.connect((err) => {
     
     // Post Data
     app.post("/tambah", (req, res) => {
-        const insertSql = `INSERT INTO orderan_masuk (nama_pembeli, email_pembeli, no_handphone, alamat, nama_barang, harga) VALUES ('${req.body.nama}', '${req.body.email}', '${req.body.noHp}', '${req.body.alamat}', '${req.body.namaBarang}', '${req.body.harga}');`
-        db.query(insertSql, (err, result) => {
-            if (err) throw err
-            res.redirect("/");
-        })
-    })
+        const insertOrderSql = `INSERT INTO orderan_masuk (nama_pembeli, email_pembeli, no_handphone, alamat, nama_barang, harga) VALUES ('${req.body.nama}', '${req.body.email}', '${req.body.noHp}', '${req.body.alamat}', '${req.body.namaBarang}', '${req.body.harga}');`;
+        const insertCustomerSql = `INSERT INTO pelanggan (nama, alamat, no_telp, email) VALUES ('${req.body.nama}', '${req.body.alamat}', '${req.body.noHp}', '${req.body.email}');`;
+    
+        db.query(insertOrderSql, (err, result) => {
+            if (err) {
+                throw err;
+            }
+            
+            db.query(insertCustomerSql, (err, result) => {
+                if (err) {
+                    throw err;
+                }
+                
+                res.redirect("/view.html");
+            });
+        });
+    });
+    
     
 
     app.post("/supplier", (req, res) => {

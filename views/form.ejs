@@ -9,6 +9,11 @@
 </head>
 <body>
 
+  <style>
+    .hide{
+      display: none;
+    }
+  </style>
 
     <!-- FORM START -->
    
@@ -21,7 +26,7 @@
             <h1 class="text-2xl font-bold text-zinc-600 sm:text-3xl font-mono">uhuy<span class="text-yellow-400">.com</span></h1>
           </div>
           <p class="max-w-xl text-lg">
-            Because we are fully independent and not influenced by manufacturers or other groups, you can trust that our recommendations are tailored to your needs.
+            For cancellation or order returns, please contact us via telephone. 
           </p>
   
           <div class="mt-8">
@@ -136,6 +141,16 @@
     </div>
   </div>
 </section>
+
+<!-- Add a div for the popup -->
+<div id="popup" class=" fixed top-0 left-0 w-full h-full bg-gray-500 bg-opacity-50 flex justify-center items-center hide" >
+  <div class="bg-white p-4 rounded-md">
+    <h2 class="text-lg font-bold">Purchase Complete!</h2>
+    <p class="text-md">Your order has been successfully placed.</p>
+    <button id="close-popup" class="bg-yellow-400 hover:bg-yellow-500 text-white font-bold py-2 px-36 rounded-md">Complete</button>
+  </div>
+</div>
+
     <!-- FORM FINISH -->
 
     
@@ -149,6 +164,24 @@
         localStorage.removeItem('selectedProduct'); // Clear the data after using it
       }
     });
+
+    
+document.addEventListener('DOMContentLoaded', function() {
+  const submitButton = document.querySelector('input[type="submit"]');
+  submitButton.addEventListener('click', function(event) {
+    event.preventDefault();
+    
+    document.getElementById('popup').classList.remove('hide');
+  });
+
+  document.getElementById('close-popup').addEventListener('click', function() {
+
+    document.getElementById('popup').classList.add('hide');
+
+    document.querySelector('form').submit();
+    
+  });
+});
     </script>
 </body>
 </html>
