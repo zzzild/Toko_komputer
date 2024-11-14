@@ -1,187 +1,215 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="/css/style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-</head>
-<body>
-
-  <style>
-    .hide{
-      display: none;
-    }
-  </style>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <style>
+      .hide {
+        display: none;
+      }
+    </style>
 
     <!-- FORM START -->
-   
 
-<section class="bg-white">
-  <div class="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8 ">
-    <div class="grid grid-cols-1 gap-x-16 gap-y-8 lg:grid-cols-5">
-        <div class="lg:col-span-2 lg:pt-16">
-          <div class="text-start sm:text-left">
-            <h1 class="text-2xl font-bold text-zinc-600 sm:text-3xl font-mono">uhuy<span class="text-yellow-400">.com</span></h1>
-          </div>
-          <p class="max-w-xl text-lg">
-            For cancellation or order returns, please contact us via telephone. 
-          </p>
-  
-          <div class="mt-8">
-          
-          <p class="text-xl text-gray-500">For assistance call us at</p>
-          <a href="#" class="text-2xl font-bold text-yellow-500 hover:text-yellow-600"> 0151 475 4450. </a>
-          <address class="mt-5 not-italic">
-            <p class="text-md text-gray-500">Address: 12 Jl Manggah, kalimalang, Bekasi 11414</p>
-            <p class="text-md text-gray-500">Phone: (+62) 1232-1838</p>
-            <p class="text-md text-gray-500">Email: support@uhuycom.com</p>
-          </address>
+    <section class="bg-white">
+      <div class="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 gap-x-16 gap-y-8 lg:grid-cols-5">
+          <div class="lg:col-span-2 lg:pt-16">
+            <div class="text-start sm:text-left">
+              <h1
+                class="text-2xl font-bold text-zinc-600 sm:text-3xl font-mono"
+              >
+                uhuy<span class="text-yellow-400">.com</span>
+              </h1>
+            </div>
+            <p class="max-w-xl text-lg">
+              For cancellation or order returns, please contact us via
+              telephone.
+            </p>
+
+            <div class="mt-8">
+              <p class="text-xl text-gray-500">For assistance call us at</p>
+              <a
+                href="#"
+                class="text-2xl font-bold text-yellow-500 hover:text-yellow-600"
+              >
+                0151 475 4450.
+              </a>
+              <address class="mt-5 not-italic">
+                <p class="text-md text-gray-500">
+                  Address: 12 Jl Manggah, kalimalang, Bekasi 11414
+                </p>
+                <p class="text-md text-gray-500">Phone: (+62) 1232-1838</p>
+                <p class="text-md text-gray-500">Email: support@uhuycom.com</p>
+              </address>
+            </div>
+
+            <div class="mt-4 justify-start flex">
+              <button
+                onclick="location.href='/view.html'"
+                class="inline-block shrink-0 rounded-md border bg-zinc-600 px-24 py-3 text-sm font-medium text-white transition duration-300 ease-in-out hover:bg-yellow-500 focus:outline-none focus:ring"
+              >
+                Back
+              </button>
+            </div>
           </div>
 
-          <div class="mt-4 justify-start flex">
-            <button
-              onclick="location.href='/view.html'"
-              class="inline-block shrink-0 rounded-md border bg-zinc-600 px-24 py-3 text-sm font-medium text-white transition duration-300 ease-in-out hover:bg-yellow-500  focus:outline-none focus:ring"
-            >Back
-            </button>
-          </div>
-  
-        
+          <div class="rounded-lg bg-white p-8 shadow-lg lg:col-span-3 lg:p-12">
+            <h3 class="text-center font-bold"><%= title %></h3>
+            <br />
+            <form action="/tambah" method="post" class="space-y-4">
+              <div>
+                <label for="inputNama" class="sr-only">Name</label>
+                <input
+                  class="w-full rounded-lg border-gray-200 p-3 text-sm bg-slate-100"
+                  placeholder="Enter your name"
+                  type="text"
+                  name="nama"
+                  required
+                />
+              </div>
 
+              <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                <div>
+                  <label class="sr-only" for="inputEmail">Email</label>
+                  <input
+                    class="w-full rounded-lg border-gray-200 p-3 text-sm bg-slate-100"
+                    placeholder="Enter your Email address"
+                    type="email"
+                    name="email"
+                    required
+                  />
+                </div>
+
+                <div>
+                  <label class="sr-only" for="inputNoHp">Phone</label>
+                  <input
+                    class="w-full rounded-lg border-gray-200 p-3 text-sm bg-slate-100"
+                    placeholder="Enter your Phone Number"
+                    type="tel"
+                    name="noHp"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label class="sr-only" for="inputAlamat">Address</label>
+
+                <textarea
+                  class="w-full rounded-lg border-gray-200 p-3 text-sm bg-slate-100"
+                  placeholder="Enter your Address"
+                  rows="8"
+                  name="alamat"
+                  required
+                ></textarea>
+              </div>
+
+              <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                <div>
+                  <label
+                    class="text-md font-medium text-gray-700"
+                    for="inputNamaBarang"
+                    >Item</label
+                  >
+                  <input
+                    class="w-full rounded-lg border-gray-200 p-3 text-sm bg-slate-100"
+                    placeholder=""
+                    type="text"
+                    id="namaBarang"
+                    name="namaBarang"
+                    readonly
+                  />
+                </div>
+
+                <div>
+                  <label
+                    class="text-md font-medium text-gray-700"
+                    for="inputHarga"
+                    >Price</label
+                  >
+                  <input
+                    class="w-full rounded-lg border-gray-200 p-3 text-sm bg-slate-100"
+                    type="number"
+                    id="hargaBarang"
+                    step="1"
+                    name="harga"
+                    readonly
+                  />
+                </div>
+              </div>
+
+              <div class="mt-4 justify-center flex">
+                <input
+                  type="submit"
+                  value="Complete Purchase"
+                  class="inline-block shrink-0 rounded-md border border-yellow-400 bg-yellow-400 px-60 py-3 text-sm font-medium text-zinc-600 transition hover:bg-zinc-600 hover:text-yellow-400 focus:outline-none focus:ring active:bg-zinc-600 duration-300 ease-in-out"
+                />
+              </div>
+            </form>
+          </div>
+        </div>
       </div>
+    </section>
 
-      <div class="rounded-lg bg-white p-8 shadow-lg lg:col-span-3 lg:p-12">
-        <h3 class="text-center font-bold"><%= title %></h3><br>
-        <form action="/tambah" method="post" class="space-y-4">
-          <div>
-            <label for="inputNama" class="sr-only">Name</label>
-            <input
-              class="w-full rounded-lg border-gray-200 p-3 text-sm bg-slate-100"
-              placeholder="Enter your name"
-              type="text"
-              name="nama"
-              required
-            />
-          </div>
-
-          <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
-            <div>
-              <label class="sr-only"  for="inputEmail">Email</label>
-              <input
-                class="w-full rounded-lg border-gray-200 p-3 text-sm bg-slate-100"
-                placeholder="Enter your Email address"
-                type="email"
-                name="email"
-                required
-              />
-            </div>
-
-            <div>
-              <label class="sr-only" for="inputNoHp">Phone</label>
-              <input
-                class="w-full rounded-lg border-gray-200 p-3 text-sm bg-slate-100"
-                placeholder="Enter your Phone Number"
-                type="tel"
-                name="noHp"
-                required
-              />
-            </div>
-          </div>
-          
-          <div>
-            <label class="sr-only" for="inputAlamat">Address</label>
-
-            <textarea
-              class="w-full rounded-lg border-gray-200 p-3 text-sm bg-slate-100"
-              placeholder="Enter your Address"
-              rows="8"
-              name="alamat"
-              required
-            ></textarea>
-          </div>
-
-          <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
-            <div>
-              <label class=" text-md font-medium text-gray-700"  for="inputNamaBarang">Item</label>
-              <input
-                class="w-full rounded-lg border-gray-200 p-3 text-sm bg-slate-100"
-                placeholder=""
-                type="text"
-                id="namaBarang" 
-                name="namaBarang"
-                readonly
-              />
-            </div>
-
-            <div>
-              <label class=" text-md font-medium text-gray-700" for="inputHarga">Price</label>
-              <input
-                class="w-full rounded-lg border-gray-200 p-3 text-sm bg-slate-100"
-                type="number"
-                id="hargaBarang" step="1"
-                name="harga"
-                readonly
-              />
-            </div>
-          </div>
-
-          <div class="mt-4 justify-center flex">
-            <input
-              type="submit"
-              value="Complete Purchase"
-              class="inline-block shrink-0 rounded-md border border-yellow-400 bg-yellow-400 px-60 py-3 text-sm font-medium text-zinc-600 transition hover:bg-zinc-600 hover:text-yellow-400 focus:outline-none focus:ring active:bg-zinc-600 duration-300 ease-in-out"
-            >
-            </input>
-          </div>
-        </form>
-        
+    <!-- Add a div for the popup -->
+    <div
+      id="popup"
+      class="fixed top-0 left-0 w-full h-full bg-gray-500 bg-opacity-50 flex justify-center items-center hide"
+    >
+      <div class="bg-white p-4 rounded-md">
+        <h2 class="text-lg font-bold">Purchase Complete!</h2>
+        <p class="text-md">Your order has been successfully placed.</p>
+        <button
+          id="close-popup"
+          class="bg-yellow-400 hover:bg-yellow-500 text-white font-bold py-2 px-36 rounded-md"
+        >
+          Complete
+        </button>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- Add a div for the popup -->
-<div id="popup" class=" fixed top-0 left-0 w-full h-full bg-gray-500 bg-opacity-50 flex justify-center items-center hide" >
-  <div class="bg-white p-4 rounded-md">
-    <h2 class="text-lg font-bold">Purchase Complete!</h2>
-    <p class="text-md">Your order has been successfully placed.</p>
-    <button id="close-popup" class="bg-yellow-400 hover:bg-yellow-500 text-white font-bold py-2 px-36 rounded-md">Complete</button>
-  </div>
-</div>
 
     <!-- FORM FINISH -->
 
-    
     <script src="/js/main.js"></script>
     <script>
-      document.addEventListener('DOMContentLoaded', function() {
-      const product = JSON.parse(localStorage.getItem('selectedProduct'));
-      if (product) {
-        document.getElementById('namaBarang').value = product.brand;
-        document.getElementById('hargaBarang').value = product.price.replace('Rp', '').replace('.', '');
-        localStorage.removeItem('selectedProduct'); // Clear the data after using it
-      }
-    });
+      document.addEventListener("DOMContentLoaded", function () {
+        const product = JSON.parse(localStorage.getItem("selectedProduct"));
+        if (product) {
+          document.getElementById("namaBarang").value = product.brand;
+          document.getElementById("hargaBarang").value = product.price
+            .replace("Rp", "")
+            .replace(".", "");
+          localStorage.removeItem("selectedProduct"); // Clear the data after using it
+        }
+      });
 
-    
-document.addEventListener('DOMContentLoaded', function() {
-  const submitButton = document.querySelector('input[type="submit"]');
-  submitButton.addEventListener('click', function(event) {
-    event.preventDefault();
-    
-    document.getElementById('popup').classList.remove('hide');
-  });
+      document.addEventListener("DOMContentLoaded", function () {
+        const submitButton = document.querySelector('input[type="submit"]');
+        submitButton.addEventListener("click", function (event) {
+          event.preventDefault();
 
-  document.getElementById('close-popup').addEventListener('click', function() {
+          document.getElementById("popup").classList.remove("hide");
+        });
 
-    document.getElementById('popup').classList.add('hide');
+        document
+          .getElementById("close-popup")
+          .addEventListener("click", function () {
+            document.getElementById("popup").classList.add("hide");
 
-    document.querySelector('form').submit();
-    
-  });
-});
+            document.querySelector("form").submit();
+          });
+      });
     </script>
-</body>
+  </body>
 </html>
